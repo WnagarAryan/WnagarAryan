@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="170" viewBox="0 0 1000 170" role="img" aria-label="footer">
+  <title>neural footer</title>
+
+  <defs>
+    <linearGradient id="fw-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#070b1a"/>
+      <stop offset="55%"  stop-color="#0d1533"/>
+      <stop offset="100%" stop-color="#151b40"/>
+    </linearGradient>
+
+    <radialGradient id="fw-neb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3b5ce0" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#3b5ce0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fw-neb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#c95a7a" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#c95a7a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fw-neb3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#2dd4bf" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="fw-scrim" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#070b1a" stop-opacity="0.88"/>
+      <stop offset="65%"  stop-color="#070b1a" stop-opacity="0.62"/>
+      <stop offset="100%" stop-color="#070b1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="fw-w1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#3b5ce0" stop-opacity="0.20"/>
+      <stop offset="55%"  stop-color="#7aa2f7" stop-opacity="0.17"/>
+      <stop offset="100%" stop-color="#c95a7a" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="fw-w2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#9ecbff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="fw-w3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#c95a7a" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#3b5ce0" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <filter id="fw-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="fw-clip"><rect width="1000" height="170"/></clipPath>
+
+    <linearGradient id="fw-vfade" gradientUnits="userSpaceOnUse" x1="0" y1="116" x2="0" y2="170">
+      <stop offset="0%"   stop-color="#fff" stop-opacity="0"/>
+      <stop offset="55%"  stop-color="#fff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="fw-wmask"><rect x="0" y="118" width="1000" height="52" fill="url(#fw-vfade)"/></mask>
+
+    <style>
+      .fw-font { font-family:'Inter','Segoe UI',Roboto,Arial,sans-serif; }
+      .fw-mono { font-family:'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace; }
+
+      /* dendrites: a short dash chased along a long gap reads as one pulse
+         travelling down the connection */
+      .fw-axon  { stroke:#4a63b8; stroke-opacity:.42; fill:none; stroke-width:1; }
+      .fw-pulse { fill:none; stroke-width:1.6; stroke-linecap:round;
+                  stroke-dasharray:7 320; animation:fw-flow 3.4s linear infinite; }
+
+      @keyframes fw-flow  { to { stroke-dashoffset:-327; } }
+      @keyframes fw-fire  { 0%,72%,100%{ r:2; opacity:.45 } 80%{ r:4.4; opacity:1 } }
+      @keyframes fw-halo  { 0%,72%,100%{ transform:scale(.5); opacity:0 } 80%{ transform:scale(1); opacity:.5 } 100%{ opacity:0 } }
+      @keyframes fw-twinkle { 0%,100%{ opacity:.25 } 50%{ opacity:.9 } }
+      @keyframes fw-driftA  { 0%,100%{ transform:translate(0,0) } 50%{ transform:translate(38px,-14px) } }
+      @keyframes fw-driftB  { 0%,100%{ transform:translate(0,0) } 50%{ transform:translate(-32px,12px) } }
+      @keyframes fw-roll1   { from{ transform:translateX(0) }    to{ transform:translateX(-500px) } }
+      @keyframes fw-roll2   { from{ transform:translateX(-500px) } to{ transform:translateX(0) } }
+      @keyframes fw-breathe { 0%,100%{ opacity:.78 } 50%{ opacity:1 } }
+
+      #fw-neb-a { animation: fw-driftA 11s ease-in-out infinite; }
+      #fw-neb-b { animation: fw-driftB 13s ease-in-out infinite 1s; }
+      #fw-neb-c { animation: fw-driftA 9s  ease-in-out infinite .6s; }
+
+      #fw-p1 { stroke:#9ecbff; animation-delay:0s;   }
+      #fw-p2 { stroke:#7aa2f7; animation-delay:.5s;  }
+      #fw-p3 { stroke:#e8b7c6; animation-delay:1.0s; }
+      #fw-p4 { stroke:#9ecbff; animation-delay:1.5s; }
+      #fw-p5 { stroke:#2dd4bf; animation-delay:2.0s; }
+      #fw-p6 { stroke:#e8b7c6; animation-delay:2.5s; }
+      #fw-p7 { stroke:#7aa2f7; animation-delay:2.9s; }
+
+      .fw-node { animation: fw-fire 4s ease-in-out infinite; }
+      .fw-ring { animation: fw-halo 4s ease-out    infinite; }
+      #fw-n1,#fw-r1 { animation-delay:0s;   }
+      #fw-n2,#fw-r2 { animation-delay:.45s; }
+      #fw-n3,#fw-r3 { animation-delay:.9s;  }
+      #fw-n4,#fw-r4 { animation-delay:1.35s;}
+      #fw-n5,#fw-r5 { animation-delay:1.8s; }
+      #fw-n6,#fw-r6 { animation-delay:2.25s;}
+      #fw-n7,#fw-r7 { animation-delay:2.7s; }
+      #fw-n8,#fw-r8 { animation-delay:3.15s;}
+      #fw-n9,#fw-r9 { animation-delay:3.6s; }
+
+      #fw-r1{transform-origin:60px 42px}   #fw-r2{transform-origin:172px 96px}
+      #fw-r3{transform-origin:286px 34px}  #fw-r4{transform-origin:398px 104px}
+      #fw-r5{transform-origin:508px 46px}  #fw-r6{transform-origin:618px 100px}
+      #fw-r7{transform-origin:728px 36px}  #fw-r8{transform-origin:842px 94px}
+      #fw-r9{transform-origin:944px 44px}
+
+      .fw-star { animation: fw-twinkle 3s ease-in-out infinite; }
+      #fw-s2{animation-delay:.4s} #fw-s3{animation-delay:.9s} #fw-s4{animation-delay:1.4s}
+      #fw-s5{animation-delay:1.9s} #fw-s6{animation-delay:2.4s} #fw-s7{animation-delay:.7s}
+      #fw-s8{animation-delay:1.2s} #fw-s9{animation-delay:2.1s}
+
+      #fw-wave1 { animation: fw-roll1 11s linear infinite; }
+      #fw-wave2 { animation: fw-roll2 16s linear infinite; }
+      #fw-wave3 { animation: fw-roll1 22s linear infinite; }
+      #fw-title { animation: fw-breathe 5s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#fw-clip)">
+    <rect width="1000" height="170" fill="url(#fw-bg)"/>
+
+    <g>
+      <ellipse id="fw-neb-a" cx="200" cy="60"  rx="220" ry="110" fill="url(#fw-neb1)"/>
+      <ellipse id="fw-neb-b" cx="820" cy="80"  rx="240" ry="120" fill="url(#fw-neb2)"/>
+      <ellipse id="fw-neb-c" cx="520" cy="30"  rx="200" ry="90"  fill="url(#fw-neb3)"/>
+    </g>
+
+    <g fill="#dce6ff">
+      <circle class="fw-star" id="fw-s1" cx="118" cy="24"  r="1.1"/>
+      <circle class="fw-star" id="fw-s2" cx="243" cy="76"  r="1.3"/>
+      <circle class="fw-star" id="fw-s3" cx="352" cy="20"  r="1"/>
+      <circle class="fw-star" id="fw-s4" cx="466" cy="88"  r="1.2"/>
+      <circle class="fw-star" id="fw-s5" cx="574" cy="26"  r="1"/>
+      <circle class="fw-star" id="fw-s6" cx="686" cy="72"  r="1.3"/>
+      <circle class="fw-star" id="fw-s7" cx="792" cy="20"  r="1.1"/>
+      <circle class="fw-star" id="fw-s8" cx="898" cy="80"  r="1.2"/>
+      <circle class="fw-star" id="fw-s9" cx="960" cy="108" r="1"/>
+    </g>
+
+    <!-- axons: every path here is duplicated below as a .fw-pulse so a spark
+         runs along the exact same curve -->
+    <g class="fw-axon">
+      <path d="M60 42 Q116 58 172 96"/>
+      <path d="M172 96 Q229 56 286 34"/>
+      <path d="M286 34 Q342 62 398 104"/>
+      <path d="M398 104 Q453 66 508 46"/>
+      <path d="M508 46 Q563 68 618 100"/>
+      <path d="M618 100 Q673 60 728 36"/>
+      <path d="M728 36 Q785 58 842 94"/>
+      <path d="M842 94 Q893 62 944 44"/>
+      <path d="M60 42 Q173 8 286 34"/>
+      <path d="M172 96 Q285 128 398 104"/>
+      <path d="M286 34 Q397 10 508 46"/>
+      <path d="M398 104 Q508 130 618 100"/>
+      <path d="M508 46 Q618 12 728 36"/>
+      <path d="M618 100 Q730 126 842 94"/>
+      <path d="M728 36 Q836 14 944 44"/>
+    </g>
+
+    <g filter="url(#fw-glow)">
+      <path id="fw-p1" class="fw-pulse" d="M60 42 Q116 58 172 96"/>
+      <path id="fw-p2" class="fw-pulse" d="M286 34 Q342 62 398 104"/>
+      <path id="fw-p3" class="fw-pulse" d="M508 46 Q563 68 618 100"/>
+      <path id="fw-p4" class="fw-pulse" d="M728 36 Q785 58 842 94"/>
+      <path id="fw-p5" class="fw-pulse" d="M60 42 Q173 8 286 34"/>
+      <path id="fw-p6" class="fw-pulse" d="M398 104 Q508 130 618 100"/>
+      <path id="fw-p7" class="fw-pulse" d="M728 36 Q836 14 944 44"/>
+    </g>
+
+    <g fill="none" stroke="#9ecbff" stroke-width="1">
+      <circle class="fw-ring" id="fw-r1" cx="60"  cy="42"  r="9"/>
+      <circle class="fw-ring" id="fw-r2" cx="172" cy="96"  r="9"/>
+      <circle class="fw-ring" id="fw-r3" cx="286" cy="34"  r="9"/>
+      <circle class="fw-ring" id="fw-r4" cx="398" cy="104" r="9"/>
+      <circle class="fw-ring" id="fw-r5" cx="508" cy="46"  r="9"/>
+      <circle class="fw-ring" id="fw-r6" cx="618" cy="100" r="9"/>
+      <circle class="fw-ring" id="fw-r7" cx="728" cy="36"  r="9"/>
+      <circle class="fw-ring" id="fw-r8" cx="842" cy="94"  r="9"/>
+      <circle class="fw-ring" id="fw-r9" cx="944" cy="44"  r="9"/>
+    </g>
+
+    <g fill="#dce6ff" filter="url(#fw-glow)">
+      <circle class="fw-node" id="fw-n1" cx="60"  cy="42"  r="2"/>
+      <circle class="fw-node" id="fw-n2" cx="172" cy="96"  r="2"/>
+      <circle class="fw-node" id="fw-n3" cx="286" cy="34"  r="2"/>
+      <circle class="fw-node" id="fw-n4" cx="398" cy="104" r="2"/>
+      <circle class="fw-node" id="fw-n5" cx="508" cy="46"  r="2"/>
+      <circle class="fw-node" id="fw-n6" cx="618" cy="100" r="2"/>
+      <circle class="fw-node" id="fw-n7" cx="728" cy="36"  r="2"/>
+      <circle class="fw-node" id="fw-n8" cx="842" cy="94"  r="2"/>
+      <circle class="fw-node" id="fw-n9" cx="944" cy="44"  r="2"/>
+    </g>
+
+    <ellipse cx="500" cy="66" rx="330" ry="58" fill="url(#fw-scrim)"/>
+
+    <text id="fw-title" class="fw-font" x="500" y="60" text-anchor="middle"
+          font-size="26" font-weight="700" fill="#e6edf3" letter-spacing="2">Thanks for visiting</text>
+    <text class="fw-mono" x="500" y="88" text-anchor="middle"
+          font-size="12" fill="#8fa3c8" letter-spacing="3">BUILD SOMETHING &#183; SHIP IT &#183; REPEAT</text>
+
+    <!-- each wave path repeats every 500px and runs from -500 to 2500, so a
+         -500px scroll lands on an identical section and the loop is seamless -->
+    <g mask="url(#fw-wmask)">
+    <g id="fw-wave3" fill="url(#fw-w3)">
+      <path d="M-500 150 c62.5 -16 187.5 -16 250 0 c62.5 16 187.5 16 250 0 c62.5 -16 187.5 -16 250 0 c62.5 16 187.5 16 250 0 c62.5 -16 187.5 -16 250 0 c62.5 16 187.5 16 250 0 c62.5 -16 187.5 -16 250 0 c62.5 16 187.5 16 250 0 c62.5 -16 187.5 -16 250 0 c62.5 16 187.5 16 250 0 c62.5 -16 187.5 -16 250 0 c62.5 16 187.5 16 250 0 V170 H-500 Z"/>
+    </g>
+    <g id="fw-wave2" fill="url(#fw-w2)">
+      <path d="M-500 155 c62.5 -20 187.5 -20 250 0 c62.5 20 187.5 20 250 0 c62.5 -20 187.5 -20 250 0 c62.5 20 187.5 20 250 0 c62.5 -20 187.5 -20 250 0 c62.5 20 187.5 20 250 0 c62.5 -20 187.5 -20 250 0 c62.5 20 187.5 20 250 0 c62.5 -20 187.5 -20 250 0 c62.5 20 187.5 20 250 0 c62.5 -20 187.5 -20 250 0 c62.5 20 187.5 20 250 0 V170 H-500 Z"/>
+    </g>
+    <g id="fw-wave1" fill="url(#fw-w1)">
+      <path d="M-500 160 c62.5 -24 187.5 -24 250 0 c62.5 24 187.5 24 250 0 c62.5 -24 187.5 -24 250 0 c62.5 24 187.5 24 250 0 c62.5 -24 187.5 -24 250 0 c62.5 24 187.5 24 250 0 c62.5 -24 187.5 -24 250 0 c62.5 24 187.5 24 250 0 c62.5 -24 187.5 -24 250 0 c62.5 24 187.5 24 250 0 c62.5 -24 187.5 -24 250 0 c62.5 24 187.5 24 250 0 V170 H-500 Z"/>
+    </g>
+    </g>
+  </g>
+</svg>

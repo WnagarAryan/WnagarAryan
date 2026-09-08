@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="280" viewBox="0 0 1000 280" role="img" aria-label="Neural nameplate header">
+  <title>neural nameplate</title>
+
+  <defs>
+    <linearGradient id="nn-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#070b1a"/>
+      <stop offset="55%"  stop-color="#0d1533"/>
+      <stop offset="100%" stop-color="#151b40"/>
+    </linearGradient>
+
+    <radialGradient id="nn-neb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3b5ce0" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#3b5ce0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nn-neb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#c95a7a" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#c95a7a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nn-neb3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#2dd4bf" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="nn-scrim" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#070b1a" stop-opacity="0.85"/>
+      <stop offset="62%"  stop-color="#070b1a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#070b1a" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="nn-name" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="420" y2="0">
+      <stop offset="0%"   stop-color="#3b5ce0"/>
+      <stop offset="32%"  stop-color="#ffffff"/>
+      <stop offset="52%"  stop-color="#ffffff"/>
+      <stop offset="72%"  stop-color="#e8b7c6"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-460 0" to="1000 0" dur="5.5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="nn-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#3b5ce0" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#dce6ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#c95a7a" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="nn-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="nn-sglow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="nn-card"><rect x="1" y="1" width="998" height="278" rx="18"/></clipPath>
+
+    <style>
+      .nn-font { font-family: 'Inter','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif; }
+      .nn-mono { font-family: 'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace; }
+
+      .nn-axon  { stroke:#3b5ce0; stroke-opacity:.38; fill:none; stroke-width:1; }
+      .nn-pulse { fill:none; stroke-width:1.6; stroke-linecap:round;
+                  stroke-dasharray:7 300; animation:nn-flow 3.8s linear infinite; }
+      @keyframes nn-flow { to { stroke-dashoffset:-307 } }
+      #nn-q1 { stroke:#9ecbff; animation-delay:0s;   }
+      #nn-q2 { stroke:#e8b7c6; animation-delay:.6s;  }
+      #nn-q3 { stroke:#2dd4bf; animation-delay:1.2s; }
+      #nn-q4 { stroke:#9ecbff; animation-delay:1.8s; }
+      #nn-q5 { stroke:#e8b7c6; animation-delay:2.4s; }
+      #nn-q6 { stroke:#7aa2f7; animation-delay:3.0s; }
+
+      @keyframes nn-fire { 0%,74%,100%{ r:2; opacity:.45 } 82%{ r:4; opacity:1 } }
+      .nn-node { animation: nn-fire 4.4s ease-in-out infinite; }
+      #nn-n2{animation-delay:.4s}  #nn-n3{animation-delay:.8s}  #nn-n4{animation-delay:1.2s}
+      #nn-n5{animation-delay:1.6s} #nn-n6{animation-delay:2.0s} #nn-n7{animation-delay:2.4s}
+      #nn-n8{animation-delay:2.8s} #nn-n9{animation-delay:3.2s} #nn-n10{animation-delay:3.6s}
+      #nn-n11{animation-delay:.2s} #nn-n12{animation-delay:1.0s}
+
+      @keyframes nn-driftA { 0%,100%{transform:translate(0,0)} 50%{transform:translate(42px,-20px)} }
+      @keyframes nn-driftB { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-38px,18px)} }
+      @keyframes nn-driftC { 0%,100%{transform:translate(0,0)} 50%{transform:translate(24px,24px)} }
+      @keyframes nn-ring   { 0%{transform:scale(.8);opacity:.4} 100%{transform:scale(1.45);opacity:0} }
+      @keyframes nn-twinkle{ 0%,100%{opacity:.25} 50%{opacity:.9} }
+      @keyframes nn-pulse  { 0%,100%{opacity:.7} 50%{opacity:1} }
+      @keyframes nn-cur    { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+
+      #nn-gA { animation: nn-driftA 11s ease-in-out infinite; }
+      #nn-gB { animation: nn-driftB 13s ease-in-out infinite .5s; }
+      #nn-gC { animation: nn-driftC 9s  ease-in-out infinite .9s; }
+
+      #nn-r1 { animation: nn-ring 5s ease-out infinite;      transform-origin:500px 120px; }
+      #nn-r2 { animation: nn-ring 5s ease-out infinite 1.7s; transform-origin:500px 120px; }
+      #nn-r3 { animation: nn-ring 5s ease-out infinite 3.4s; transform-origin:500px 120px; }
+
+      .nn-star { animation: nn-twinkle 3.2s ease-in-out infinite; }
+      #nn-s2{animation-delay:.5s} #nn-s3{animation-delay:1.0s} #nn-s4{animation-delay:1.5s}
+      #nn-s5{animation-delay:2.0s} #nn-s6{animation-delay:2.5s}
+
+      #nn-ruleline { animation: nn-pulse 4s ease-in-out infinite; }
+      #nn-cursor { animation: nn-cur 1s step-end infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#nn-card)">
+    <rect width="1000" height="280" fill="url(#nn-bg)"/>
+
+    <g>
+      <ellipse id="nn-gA" cx="180" cy="80"  rx="260" ry="140" fill="url(#nn-neb1)"/>
+      <ellipse id="nn-gB" cx="830" cy="200" rx="260" ry="140" fill="url(#nn-neb2)"/>
+      <ellipse id="nn-gC" cx="520" cy="30"  rx="230" ry="110" fill="url(#nn-neb3)"/>
+    </g>
+
+    <g fill="#dce6ff">
+      <circle class="nn-star" id="nn-s1" cx="315" cy="52"  r="1.1"/>
+      <circle class="nn-star" id="nn-s2" cx="690" cy="44"  r="1.2"/>
+      <circle class="nn-star" id="nn-s3" cx="430" cy="248" r="1"/>
+      <circle class="nn-star" id="nn-s4" cx="585" cy="240" r="1.2"/>
+      <circle class="nn-star" id="nn-s5" cx="905" cy="115" r="1.1"/>
+      <circle class="nn-star" id="nn-s6" cx="105" cy="168" r="1"/>
+    </g>
+
+    <!-- two clusters flanking the nameplate; every pulse path below reuses one
+         of these exact curves so the spark rides the visible connection -->
+    <g class="nn-axon">
+      <path d="M48 62 Q84 100 120 142"/>
+      <path d="M120 142 Q86 182 58 222"/>
+      <path d="M120 142 Q162 104 202 70"/>
+      <path d="M202 70 Q230 98 252 132"/>
+      <path d="M58 222 Q112 218 172 206"/>
+      <path d="M172 206 Q214 172 252 132"/>
+      <path d="M48 62 Q128 30 202 70"/>
+      <path d="M252 132 Q292 120 330 126"/>
+
+      <path d="M952 62 Q916 100 880 142"/>
+      <path d="M880 142 Q914 182 942 222"/>
+      <path d="M880 142 Q838 104 798 70"/>
+      <path d="M798 70 Q770 98 748 132"/>
+      <path d="M942 222 Q888 218 828 206"/>
+      <path d="M828 206 Q786 172 748 132"/>
+      <path d="M952 62 Q872 30 798 70"/>
+      <path d="M748 132 Q708 120 670 126"/>
+
+      <path d="M330 126 Q500 96 670 126"/>
+      <path d="M252 132 Q500 300 748 132"/>
+    </g>
+
+    <g filter="url(#nn-sglow)">
+      <path id="nn-q1" class="nn-pulse" d="M48 62 Q84 100 120 142"/>
+      <path id="nn-q2" class="nn-pulse" d="M58 222 Q112 218 172 206"/>
+      <path id="nn-q3" class="nn-pulse" d="M952 62 Q916 100 880 142"/>
+      <path id="nn-q4" class="nn-pulse" d="M942 222 Q888 218 828 206"/>
+      <path id="nn-q5" class="nn-pulse" d="M252 132 Q500 300 748 132"/>
+      <path id="nn-q6" class="nn-pulse" d="M120 142 Q162 104 202 70"/>
+    </g>
+
+    <g fill="#9ecbff" filter="url(#nn-sglow)">
+      <circle class="nn-node" id="nn-n1"  cx="48"  cy="62"  r="2"/>
+      <circle class="nn-node" id="nn-n2"  cx="120" cy="142" r="2"/>
+      <circle class="nn-node" id="nn-n3"  cx="58"  cy="222" r="2"/>
+      <circle class="nn-node" id="nn-n4"  cx="172" cy="206" r="2"/>
+      <circle class="nn-node" id="nn-n5"  cx="202" cy="70"  r="2"/>
+      <circle class="nn-node" id="nn-n6"  cx="252" cy="132" r="2"/>
+      <circle class="nn-node" id="nn-n7"  cx="952" cy="62"  r="2"/>
+      <circle class="nn-node" id="nn-n8"  cx="880" cy="142" r="2"/>
+      <circle class="nn-node" id="nn-n9"  cx="942" cy="222" r="2"/>
+      <circle class="nn-node" id="nn-n10" cx="828" cy="206" r="2"/>
+      <circle class="nn-node" id="nn-n11" cx="798" cy="70"  r="2"/>
+      <circle class="nn-node" id="nn-n12" cx="748" cy="132" r="2"/>
+    </g>
+
+    <g opacity="0.4" fill="none" stroke-width="1.4">
+      <circle id="nn-r1" cx="500" cy="120" r="80" stroke="#3b5ce0"/>
+      <circle id="nn-r2" cx="500" cy="120" r="80" stroke="#c95a7a"/>
+      <circle id="nn-r3" cx="500" cy="120" r="80" stroke="#2dd4bf"/>
+    </g>
+
+    <ellipse cx="500" cy="130" rx="340" ry="80" fill="url(#nn-scrim)"/>
+
+    <text class="nn-font" x="500" y="128" text-anchor="middle" font-size="58" font-weight="800"
+          letter-spacing="6" fill="url(#nn-name)" filter="url(#nn-glow)">ARYAN NAGAR</text>
+
+    <rect id="nn-ruleline" x="270" y="148" width="460" height="3" rx="1.5" fill="url(#nn-rule)"/>
+
+    <text class="nn-mono" x="500" y="184" text-anchor="middle" font-size="15" fill="#9ecbff" letter-spacing="3">
+      AI SYSTEMS  &#183;  ML &amp; AGENTIC AI  &#183;  DATA ANALYTICS
+    </text>
+    <rect id="nn-cursor" x="764" y="172" width="8" height="16" fill="#2dd4bf"/>
+
+    <g class="nn-mono" font-size="12" fill="#5c6b93" letter-spacing="2">
+      <text x="46" y="252">LOC: JAIPUR, INDIA</text>
+      <text x="954" y="252" text-anchor="end">STATUS: KREX-TDE</text>
+    </g>
+
+    <g stroke="#9ecbff" stroke-opacity="0.45" stroke-width="2" fill="none">
+      <path d="M18 42V26h16"/><path d="M982 42V26h-16"/>
+      <path d="M18 238v16h16"/><path d="M982 238v16h-16"/>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="998" height="278" rx="18" fill="none" stroke="#7aa2f7" stroke-opacity="0.24"/>
+</svg>

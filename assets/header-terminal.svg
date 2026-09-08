@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="280" viewBox="0 0 1000 280" role="img" aria-label="Terminal header">
+  <title>profile boot sequence</title>
+
+  <defs>
+    <linearGradient id="tb-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#070b1a"/>
+      <stop offset="55%"  stop-color="#0d1533"/>
+      <stop offset="100%" stop-color="#151b40"/>
+    </linearGradient>
+
+    <radialGradient id="tb-neb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3b5ce0" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#3b5ce0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tb-neb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#c95a7a" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#c95a7a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="tb-neb3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#2dd4bf" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="tb-scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#9ecbff" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#9ecbff" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#9ecbff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="tb-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#3b5ce0"/>
+      <stop offset="50%"  stop-color="#9ecbff"/>
+      <stop offset="100%" stop-color="#c95a7a"/>
+    </linearGradient>
+
+    <filter id="tb-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="tb-card"><rect x="1" y="1" width="998" height="278" rx="18"/></clipPath>
+
+    <clipPath id="tb-c1"><rect x="46" y="86"  width="0" height="26">
+      <animate attributeName="width" values="0;0;214;214;214" keyTimes="0;0.033;0.167;0.94;1" dur="9s" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <clipPath id="tb-c2"><rect x="46" y="122" width="0" height="26">
+      <animate attributeName="width" values="0;0;226;226;226" keyTimes="0;0.189;0.344;0.94;1" dur="9s" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <clipPath id="tb-c3"><rect x="46" y="158" width="0" height="26">
+      <animate attributeName="width" values="0;0;498;498;498" keyTimes="0;0.367;0.589;0.94;1" dur="9s" repeatCount="indefinite"/>
+    </rect></clipPath>
+    <clipPath id="tb-c4"><rect x="46" y="194" width="0" height="26">
+      <animate attributeName="width" values="0;0;172;172;172" keyTimes="0;0.611;0.722;0.94;1" dur="9s" repeatCount="indefinite"/>
+    </rect></clipPath>
+
+    <style>
+      .tb-mono { font-family: 'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Courier New',monospace; }
+      .tb-prompt { fill:#2dd4bf; }
+      .tb-key    { fill:#7aa2f7; }
+      .tb-val    { fill:#dce6ff; }
+      .tb-dim    { fill:#5c6b93; }
+
+      /* background neural field, same vocabulary as the footer */
+      .tb-axon  { stroke:#3b5ce0; stroke-opacity:.30; fill:none; stroke-width:1; }
+      .tb-pulse { fill:none; stroke-width:1.5; stroke-linecap:round;
+                  stroke-dasharray:6 300; animation:tb-flow 4.2s linear infinite; }
+      @keyframes tb-flow { to { stroke-dashoffset:-306 } }
+      #tb-q1 { stroke:#9ecbff; animation-delay:0s;   }
+      #tb-q2 { stroke:#e8b7c6; animation-delay:1.4s; }
+      #tb-q3 { stroke:#2dd4bf; animation-delay:2.8s; }
+
+      @keyframes tb-fire { 0%,74%,100%{ r:1.8; opacity:.4 } 82%{ r:3.6; opacity:1 } }
+      .tb-node { animation: tb-fire 4.5s ease-in-out infinite; }
+      #tb-n2{animation-delay:.6s} #tb-n3{animation-delay:1.2s} #tb-n4{animation-delay:1.8s}
+      #tb-n5{animation-delay:2.4s} #tb-n6{animation-delay:3.0s}
+
+      @keyframes tb-driftA { 0%,100%{transform:translate(0,0)}  50%{transform:translate(46px,-22px)} }
+      @keyframes tb-driftB { 0%,100%{transform:translate(0,0)}  50%{transform:translate(-40px,20px)} }
+      @keyframes tb-driftC { 0%,100%{transform:translate(0,0)}  50%{transform:translate(26px,26px)} }
+      @keyframes tb-sweep  { 0%{transform:translateX(-1100px)} 100%{transform:translateX(1100px)} }
+      @keyframes tb-blink  { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+      @keyframes tb-flick  { 0%,100%{opacity:.5} 50%{opacity:1} }
+
+      #tb-gA { animation: tb-driftA 11s ease-in-out infinite; }
+      #tb-gB { animation: tb-driftB 13s ease-in-out infinite .4s; }
+      #tb-gC { animation: tb-driftC 9s  ease-in-out infinite .8s; }
+      #tb-sweep1 { animation: tb-sweep 6s linear infinite; }
+      #tb-cursor { animation: tb-blink 1s step-end infinite; }
+      #tb-led    { animation: tb-flick 2.4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#tb-card)">
+    <rect width="1000" height="280" fill="url(#tb-bg)"/>
+
+    <g>
+      <ellipse id="tb-gA" cx="170" cy="70"  rx="240" ry="130" fill="url(#tb-neb1)"/>
+      <ellipse id="tb-gB" cx="840" cy="210" rx="250" ry="130" fill="url(#tb-neb2)"/>
+      <ellipse id="tb-gC" cx="560" cy="40"  rx="210" ry="100" fill="url(#tb-neb3)"/>
+    </g>
+
+    <g class="tb-axon">
+      <path d="M40 250 Q160 200 250 246"/>
+      <path d="M250 246 Q380 268 520 240"/>
+      <path d="M520 240 Q660 214 800 252"/>
+      <path d="M800 252 Q900 266 968 236"/>
+      <path d="M40 250 Q210 300 520 240"/>
+      <path d="M520 240 Q740 296 968 236"/>
+      <path d="M60 62 Q140 20 236 44"/>
+      <path d="M760 40 Q860 16 950 58"/>
+    </g>
+    <g filter="url(#tb-glow)">
+      <path id="tb-q1" class="tb-pulse" d="M40 250 Q160 200 250 246"/>
+      <path id="tb-q2" class="tb-pulse" d="M520 240 Q660 214 800 252"/>
+      <path id="tb-q3" class="tb-pulse" d="M40 250 Q210 300 520 240"/>
+    </g>
+    <g fill="#9ecbff" filter="url(#tb-glow)">
+      <circle class="tb-node" id="tb-n1" cx="40"  cy="250" r="1.8"/>
+      <circle class="tb-node" id="tb-n2" cx="250" cy="246" r="1.8"/>
+      <circle class="tb-node" id="tb-n3" cx="520" cy="240" r="1.8"/>
+      <circle class="tb-node" id="tb-n4" cx="800" cy="252" r="1.8"/>
+      <circle class="tb-node" id="tb-n5" cx="236" cy="44"  r="1.8"/>
+      <circle class="tb-node" id="tb-n6" cx="950" cy="58"  r="1.8"/>
+    </g>
+
+    <rect id="tb-sweep1" x="-200" y="0" width="200" height="280" fill="url(#tb-scan)"/>
+
+    <rect x="0" y="0" width="1000" height="44" fill="#050810" fill-opacity="0.72"/>
+    <line x1="0" y1="44" x2="1000" y2="44" stroke="#7aa2f7" stroke-opacity="0.18"/>
+    <circle cx="28" cy="22" r="6" fill="#ff5f57"/>
+    <circle cx="50" cy="22" r="6" fill="#febc2e"/>
+    <circle cx="72" cy="22" r="6" fill="#28c840"/>
+    <text class="tb-mono tb-dim" x="500" y="27" font-size="13" text-anchor="middle">~/github/WnagarAryan &#8212; zsh</text>
+    <circle id="tb-led" cx="964" cy="22" r="4" fill="#2dd4bf"/>
+
+    <g id="tb-lines" font-size="19" class="tb-mono">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.94;0.985;1" dur="9s" repeatCount="indefinite"/>
+
+      <g clip-path="url(#tb-c1)">
+        <text x="46" y="105"><tspan class="tb-prompt">&gt;</tspan><tspan class="tb-val" dx="10">booting profile...</tspan></text>
+      </g>
+      <g clip-path="url(#tb-c2)">
+        <text x="46" y="141"><tspan class="tb-prompt">&gt;</tspan><tspan class="tb-key" dx="10">user&#160;&#160;</tspan><tspan class="tb-dim">: </tspan><tspan class="tb-val">Aryan Nagar</tspan></text>
+      </g>
+      <g clip-path="url(#tb-c3)">
+        <text x="46" y="177"><tspan class="tb-prompt">&gt;</tspan><tspan class="tb-key" dx="10">role&#160;&#160;</tspan><tspan class="tb-dim">: </tspan><tspan class="tb-val">AI System Architect | ML &amp; Agentic AI</tspan></text>
+      </g>
+      <g clip-path="url(#tb-c4)">
+        <text x="46" y="213"><tspan class="tb-prompt">&gt;</tspan><tspan class="tb-key" dx="10">status</tspan><tspan class="tb-dim">: </tspan><tspan class="tb-val">online</tspan></text>
+      </g>
+
+      <rect id="tb-cursor" x="46" y="196" width="11" height="22" fill="#2dd4bf">
+        <animate attributeName="x"
+          values="46;46;256;256;46;268;268;46;540;540;46;214;214;214"
+          keyTimes="0;0.033;0.167;0.185;0.189;0.344;0.363;0.367;0.589;0.607;0.611;0.722;0.94;1"
+          dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="y"
+          values="88;88;88;88;124;124;124;160;160;160;196;196;196;196"
+          keyTimes="0;0.033;0.167;0.185;0.189;0.344;0.363;0.367;0.589;0.607;0.611;0.722;0.94;1"
+          dur="9s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <rect x="46" y="246" width="908" height="4" rx="2" fill="#7aa2f7" fill-opacity="0.12"/>
+    <rect x="46" y="246" width="0" height="4" rx="2" fill="url(#tb-bar)">
+      <animate attributeName="width" values="0;0;908;908;0" keyTimes="0;0.033;0.722;0.94;1" dur="9s" repeatCount="indefinite"/>
+    </rect>
+
+    <g stroke="#2dd4bf" stroke-opacity="0.42" stroke-width="2" fill="none">
+      <path d="M16 68V56h12"/><path d="M984 68V56h-12"/>
+      <path d="M16 212v12h12"/><path d="M984 212v12h-12"/>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="998" height="278" rx="18" fill="none" stroke="#7aa2f7" stroke-opacity="0.24"/>
+</svg>

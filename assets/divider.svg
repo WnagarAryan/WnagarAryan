@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="30" viewBox="0 0 1000 30" role="img" aria-label="divider">
+  <title>axon divider</title>
+
+  <defs>
+    <linearGradient id="dv-axon" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+      <stop offset="0%"   stop-color="#3b5ce0" stop-opacity="0"/>
+      <stop offset="15%"  stop-color="#4a63b8" stop-opacity="0.55"/>
+      <stop offset="50%"  stop-color="#7aa2f7" stop-opacity="0.75"/>
+      <stop offset="85%"  stop-color="#c95a7a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#c95a7a" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="dv-glow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <style>
+      /* one action potential sweeping the axon: a short dash chased along a
+         gap longer than the path, so only a single spark is ever visible */
+      #dv-spark { fill:none; stroke:#dce6ff; stroke-width:2; stroke-linecap:round;
+                  stroke-dasharray:10 1000; animation:dv-fire 3.6s linear infinite; }
+      @keyframes dv-fire { from { stroke-dashoffset:1010 } to { stroke-dashoffset:0 } }
+
+      @keyframes dv-relay { 0%,100%{ opacity:.35; r:2 } 50%{ opacity:1; r:3 } }
+      .dv-node { animation: dv-relay 3.6s ease-in-out infinite; }
+      #dv-b1{animation-delay:.35s} #dv-b2{animation-delay:.95s} #dv-b3{animation-delay:1.6s}
+      #dv-b4{animation-delay:2.25s} #dv-b5{animation-delay:2.85s}
+
+      @keyframes dv-breathe { 0%,100%{ opacity:.5 } 50%{ opacity:1 } }
+      #dv-line { animation: dv-breathe 5s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- dendrite stubs branching off the trunk at each relay node -->
+  <g stroke="#4a63b8" stroke-opacity="0.4" stroke-width="1" fill="none">
+    <path d="M150 15 l-13 -7 M150 15 l-11 8"/>
+    <path d="M330 15 l13 -8 M330 15 l10 8"/>
+    <path d="M500 15 l-14 -8 M500 15 l14 -8"/>
+    <path d="M670 15 l-13 8 M670 15 l11 -8"/>
+    <path d="M850 15 l13 7 M850 15 l-11 -8"/>
+  </g>
+
+  <path id="dv-line" d="M0 15 H1000" stroke="url(#dv-axon)" stroke-width="2" fill="none"/>
+  <path id="dv-spark" d="M0 15 H1000" filter="url(#dv-glow)"/>
+
+  <g fill="#9ecbff" filter="url(#dv-glow)">
+    <circle class="dv-node" id="dv-b1" cx="150" cy="15" r="2"/>
+    <circle class="dv-node" id="dv-b2" cx="330" cy="15" r="2"/>
+    <circle class="dv-node" id="dv-b3" cx="500" cy="15" r="2"/>
+    <circle class="dv-node" id="dv-b4" cx="670" cy="15" r="2"/>
+    <circle class="dv-node" id="dv-b5" cx="850" cy="15" r="2"/>
+  </g>
+</svg>
