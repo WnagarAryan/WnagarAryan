@@ -244,7 +244,7 @@ cannot fetch anything external.
 
 | File | Source | Treatment |
 |---|---|---|
-| `banner-bust.svg` | `download (2).jpg` | keyed to an alpha PNG, trimmed to 141x327 |
+| `banner-bust.svg` | `download (2).jpg` | keyed to alpha, split into three piece PNGs |
 | `header-neon.svg` | `download (1).jpg` | scaled to 630x280, sat on the right, faded left |
 | `header-terminal.svg` | `download (3).jpg` | cropped above the lettering, blurred, darkened |
 | `footer-wave.svg` | `download (4).jpg` | scaled to 1000x333, cropped to a 170 px band |
@@ -274,9 +274,24 @@ im.crop(alpha.getbbox()).save("bust.png", optimize=True)
 ```
 
 `LO` is the number that matters. Below about 0.10 the ambient glow between the pieces survives
-and bridges them into one mass; the two clip rows in the SVG (127 and 206) are the transparent
-gaps that only open up above 0.14. The PNG is embedded once in `<defs>` and drawn three times
-with `<use>` — carrying three copies of the base64 instead costs 255 KB.
+and bridges them into one mass.
+
+**Horizontal bands cannot split this image.** Clipping the keyed PNG into three rows looked right
+until you watched it: the skull occupies rows 103-207 of the source and the jaw starts at row 194,
+so they overlap by thirteen rows and any single cut row hands part of the skull to the jaw, which
+then drift together. `split_bust.py` labels connected components in the alpha instead, keeps the
+three largest, assigns loose specks to the nearest one, and writes a PNG per piece. Each is then
+positioned by its own bounding box and animated on its own clock — no clip paths at all.
+
+A caution on verifying this. Chrome's `--virtual-time-budget` advances SMIL but paints CSS
+animations at their **first frame**, so a headless screenshot cannot show CSS-driven motion at all,
+however long the budget. To check geometry, freeze the pieces at their extremes instead:
+
+```css
+#bb-p1 { transform: translateY(7px); }
+#bb-p2 { transform: translateY(-9px); }
+#bb-p3 { transform: translateY(6px); }
+```
 
 **The clouds' crop.** `download (3).jpg` has "GOD'S PLAN" set across its middle. Scaled to fill
 the header, that lettering lands exactly on the typed `user` and `role` lines. Blurring it was
