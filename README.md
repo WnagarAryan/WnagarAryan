@@ -1,17 +1,5 @@
-<!-- ============ MASTHEAD (severed bust, three slices adrift) ============ -->
-<p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-bust.svg" alt="Aryan Nagar"/>
-</p>
-
-<!-- ============ NAMEPLATE ============ -->
-<p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-neon.svg" alt="Aryan Nagar"/>
-</p>
-
-<!-- ============ TERMINAL ============ -->
-<p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/>
-</p>
+<!-- ============ MASTHEAD / NAMEPLATE / TERMINAL ============ -->
+<div align="center"><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-bust.svg" alt="Aryan Nagar"/><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-neon.svg" alt="Aryan Nagar"/><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/></div>
 
 <!--
   ALTERNATIVE MASTHEADS - the neurons clip, kept from the earlier version.
