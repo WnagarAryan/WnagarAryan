@@ -159,6 +159,13 @@ values rather than random so the file rebuilds identically, and the eleven lette
 
 The face is Josefin Sans Light, subsetted to the eight glyphs `PERSCTIV` - 1.6 KB.
 
+The canvas is 440x1040, about 1:2.36, and rendered at `width="100%"`. That ratio is not
+arbitrary: it is what the sidebar cell actually wants once the code block and quote card have
+set the row height. The panel inherited 1:1.9 from the forest photo it replaced and left dead
+space above and below it. If you edit the left column - add stack lines, drop the quote - the
+row height moves and this number needs revisiting. Letter spacing tracks the canvas: `STEP` is
+72 against a 44 px face, the same ~1.64 ratio the source poster uses.
+
 One detail worth keeping. The rule is
 
 ```css
