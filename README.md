@@ -1,27 +1,23 @@
-<!-- ============ MASTHEAD (firing neurons, animated WebP) ============ -->
+<!-- ============ MASTHEAD (firing neurons + nameplate, animated WebP) ============ -->
 <p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons.webp" alt="Aryan Nagar"/>
-</p>
-
-<!-- ============ HEADER (custom animated SVG) ============ -->
-<p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/>
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons-titled.webp" alt="Aryan Nagar"/>
 </p>
 
 <!--
-  ALTERNATIVES - swap in whichever you prefer, delete the unused assets.
+  ALTERNATIVES - swap in whichever you prefer.
 
-  Single-image masthead with the name burned into the clip (then delete the
-  header-terminal.svg block above, it becomes redundant):
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons-titled.webp" alt="Aryan Nagar"/>
+  Clean banner with no text burned in, paired with the animated terminal header
+  that types out the same name and role:
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons.webp" alt="Aryan Nagar"/>
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/>
+
+  Neural-nameplate SVG - name in a sweeping gradient between two synapse clusters:
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-neon.svg" alt="Aryan Nagar"/>
 
   GIF fallback of the clean banner - 5.5 MB instead of 1.1 MB, and visibly
   banded, since 96 colors cannot hold the blue gradient. Only worth using if
   something in your audience's setup refuses animated WebP:
   <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons.gif" alt="Aryan Nagar"/>
-
-  Neural-nameplate SVG instead of the terminal one:
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-neon.svg" alt="Aryan Nagar"/>
 -->
 
 <p align="center">
