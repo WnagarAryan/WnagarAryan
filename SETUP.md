@@ -244,13 +244,12 @@ cannot fetch anything external.
 
 | File | Source | Treatment |
 |---|---|---|
-| `banner-bust.svg` | `download (2).jpg` | scaled to 676x380, blacks crushed to zero |
+| `banner-bust.svg` | `download (2).jpg` | keyed to an alpha PNG, trimmed to 141x327 |
 | `header-neon.svg` | `download (1).jpg` | scaled to 630x280, sat on the right, faded left |
 | `header-terminal.svg` | `download (3).jpg` | cropped above the lettering, blurred, darkened |
 | `footer-wave.svg` | `download (4).jpg` | scaled to 1000x333, cropped to a 170 px band |
 
 ```bash
-ffmpeg -i "download (2).jpg" -vf "scale=676:380:flags=lanczos,curves=all='0/0 0.15/0 0.38/0.42 0.7/0.78 1/1',eq=brightness=0.035:saturation=1.1" -q:v 3 bust.jpg
 ffmpeg -i "download (1).jpg" -vf "scale=630:280:flags=lanczos,eq=brightness=-0.04:contrast=1.06" -q:v 4 statue.jpg
 ffmpeg -i "download (3).jpg" -vf "crop=518:134:110:0,scale=1000:280:flags=lanczos,gblur=sigma=4,eq=brightness=-0.14:contrast=0.95" -q:v 4 clouds.jpg
 ffmpeg -i "download (4).jpg" -vf "scale=1000:333:flags=lanczos,crop=1000:170:0:96,eq=brightness=-0.05" -q:v 4 horses.jpg
@@ -258,12 +257,26 @@ ffmpeg -i "download (4).jpg" -vf "scale=1000:333:flags=lanczos,crop=1000:170:0:9
 
 Two of those treatments are load-bearing, not taste.
 
-**The bust's `curves`.** The banner cuts the photo into three bands and slides them apart. The
-photo's background is dark but not black, and the slices are screen-blended, so a shifted band
-no longer lined up with its neighbour's background luminance and drew a bright horizontal seam
-straight across all 1000 px. Crushing everything below 0.15 to pure black makes screen blending
-contribute nothing there, and the seams vanish. Too aggressive a curve (0.30) also swallows the
-bust, so the numbers matter.
+**The bust is keyed, not blended.** The banner cuts the sculpture into its three pieces and
+slides them apart. Two earlier attempts failed: screen-blending the JPEG left a visible rectangle
+because the photo's background is dark but not black, and crushing the blacks with a `curves`
+filter worked only until a `brightness` lift after it pushed black back up to 9 and the blocks
+returned. The fix is a real alpha channel — luminance under 0.14 fully transparent, over 0.30
+fully opaque, smoothstep between, built in Pillow:
+
+```python
+LO, HI = 0.14, 0.30
+lut = [0 if v/255 <= LO else 255 if v/255 >= HI else
+       int(round((lambda t: t*t*(3-2*t))((v/255-LO)/(HI-LO))*255)) for v in range(256)]
+alpha = im.convert("L").point(lut).filter(ImageFilter.GaussianBlur(0.5))
+im.putalpha(alpha)
+im.crop(alpha.getbbox()).save("bust.png", optimize=True)
+```
+
+`LO` is the number that matters. Below about 0.10 the ambient glow between the pieces survives
+and bridges them into one mass; the two clip rows in the SVG (127 and 206) are the transparent
+gaps that only open up above 0.14. The PNG is embedded once in `<defs>` and drawn three times
+with `<use>` — carrying three copies of the base64 instead costs 255 KB.
 
 **The clouds' crop.** `download (3).jpg` has "GOD'S PLAN" set across its middle. Scaled to fill
 the header, that lettering lands exactly on the typed `user` and `role` lines. Blurring it was
