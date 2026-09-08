@@ -33,6 +33,7 @@ The text baked into the SVGs lives here:
 
 - `assets/header-terminal.svg` — `Aryan Nagar`, `AI System Architect | ML & Agentic AI`, `~/github/WnagarAryan`
 - `assets/header-neon.svg` — `ARYAN NAGAR`, the three roles, `LOC:` and `STATUS:` labels
+  (the font is embedded — adding a new character needs a new subset, see §6)
 - `assets/footer-wave.svg` — the two footer lines
 - `assets/banner-neurons-titled.webp` — text is burned into the frames, see §5
 
@@ -128,12 +129,15 @@ ffmpeg -i imlz5lae1m.mp4 \
 Titled banner — the name is drawn into the pixels, so rerun this whenever it changes:
 
 ```bash
+# ab.ttf / asb.ttf must sit in the working directory - see section 6.
+# A Windows absolute path breaks drawtext: ffmpeg splits filter options on ":"
+# and the drive letter's colon is eaten before any escaping applies.
 ffmpeg -i imlz5lae1m.mp4 -vf "\
 crop=1920:640:0:220,fps=12,scale=1000:-1:flags=lanczos,\
-drawbox=x=0:y=0:w=1000:h=333:color=black@0.38:t=fill,\
-drawtext=fontfile='C\:/Windows/Fonts/seguibl.ttf':text='ARYAN NAGAR':fontcolor=white:fontsize=62:x=(w-text_w)/2:y=110:shadowcolor=black@0.85:shadowx=0:shadowy=3,\
-drawbox=x=310:y=182:w=380:h=2:color=0x9ECBFF@0.9:t=fill,\
-drawtext=fontfile='C\:/Windows/Fonts/consolab.ttf':text='AI SYSTEM ARCHITECT  |  ML \& AGENTIC AI':fontcolor=0xBFD8FF:fontsize=20:x=(w-text_w)/2:y=196" \
+drawbox=x=0:y=0:w=1000:h=333:color=black@0.42:t=fill,\
+drawtext=fontfile=ab.ttf:text='ARYAN NAGAR':fontcolor=white:fontsize=88:x=(w-text_w)/2:y=94:shadowcolor=black@0.85:shadowx=0:shadowy=4,\
+drawbox=x=220:y=202:w=560:h=3:color=0x9ECBFF@0.9:t=fill,\
+drawtext=fontfile=asb.ttf:text='AI SYSTEM ARCHITECT  |  ML \& AGENTIC AI':fontcolor=0xCFE2FF:fontsize=27:x=(w-text_w)/2:y=222" \
   -c:v libwebp -q:v 65 -compression_level 6 -loop 0 -an \
   assets/banner-neurons-titled.webp
 ```
@@ -144,24 +148,73 @@ that last number to reframe; raise `-q:v` for better quality and a bigger file.
 ### The forest in the About Me sidebar
 
 `assets/forest-mist.svg` is a still photo animated in SVG rather than re-encoded as a video.
-The image is cropped to 576x860, downscaled to 440 px wide, saved as JPEG and embedded as a
-base64 data URI, so the file is self-contained at 32 KB and the motion — the breath, the
+The image is cropped to 576x1094, downscaled to 440 px wide, saved as JPEG and embedded as a
+base64 data URI, so the file is self-contained at 36 KB and the motion — the breath, the
 three drifting fog banks, the floating motes — is CSS on top of it.
 
 Swapping in a different image means regenerating the file:
 
 ```bash
-ffmpeg -i <your-image> -vf "crop=576:860:0:340,scale=440:-2:flags=lanczos" -q:v 4 forest.jpg
+ffmpeg -i <your-image> -vf "crop=576:1094:0:110,scale=440:-2:flags=lanczos" -q:v 4 forest.jpg
 ```
 
 then base64 it and replace the `href="data:image/jpeg;base64,..."` value in the SVG. Crop
 values must stay within the source dimensions or ffmpeg refuses the filter outright.
 
+The aspect ratio is deliberate. The README renders this at `width="100%"` so it fills its
+table cell, and roughly 1:1.9 is what it takes to match the height of the code block beside
+it. A squarer crop leaves dead space under the image; a taller one pushes the row past the
+code block and moves the gap to the other side.
+
 Remote images do not work here. GitHub serves the SVG through its camo proxy, and an SVG
 loaded as an `<img>` cannot fetch anything external — that is the same restriction the
 Pac-Man workflow works around by inlining its ghost sprites.
 
-## 6. Optional extras
+## 6. Fonts
+
+Everything with type in it uses **Archivo** - `Archivo Black` for display lines, `Archivo
+SemiBold` for supporting ones. Both come from Google Fonts under the OFL:
+
+```bash
+curl -L -o ab.ttf  "https://github.com/google/fonts/raw/main/ofl/archivoblack/ArchivoBlack-Regular.ttf"
+curl -L -o var.ttf "https://github.com/google/fonts/raw/main/ofl/archivo/Archivo%5Bwdth%2Cwght%5D.ttf"
+```
+
+`asb.ttf` is that variable font pinned to wght 600 with `fontTools.varLib.instancer`. Both
+TTFs are build inputs for the banner's ffmpeg command, not repository files.
+
+The SVGs are a different problem. GitHub renders them as `<img>` through its camo proxy, and
+an SVG in that position cannot fetch anything external - a Google Fonts `<link>` is silently
+ignored and the text falls back to a system font. So the face has to travel inside the file,
+as a base64 `@font-face` in the SVG's own `<style>`.
+
+Shipping a whole font that way would be wasteful, so each is subsetted to the 84 characters
+actually used: Archivo Black lands at 10.6 KB, SemiBold at 7.2 KB.
+
+```python
+from fontTools import subset
+
+CHARS = ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+         "0123456789 .,:;!?'\"|/()&-+@#\u00b7\u2013\u2014")
+
+opts = subset.Options()
+opts.flavor = "woff"          # not woff2 - that encoder needs the brotli extension
+opts.layout_features = ["kern"]
+font = subset.load_font("ab.ttf", opts)
+s = subset.Subsetter(options=opts)
+s.populate(text=CHARS)
+s.subset(font)
+subset.save_font(font, "archivo-black.woff", opts)
+```
+
+A character outside `CHARS` renders as a missing glyph, not as a fallback - so widen `CHARS`
+and regenerate both subsets before adding an accent or an em dash to any SVG.
+
+`header-terminal.svg` stays monospace on purpose. A terminal set in a proportional face stops
+reading as a terminal, and its typing animation is built on a fixed 10.5 px advance per
+character - every clip width and cursor keyframe in section 2 derives from that number.
+
+## 7. Optional extras
 
 Not wired up, but drop-in if you want them:
 
