@@ -246,12 +246,12 @@ cannot fetch anything external.
 |---|---|---|
 | `banner-bust.svg` | `download (2).jpg` | keyed to alpha, split into three piece PNGs |
 | `header-neon.svg` | `download (1).jpg` | scaled to 630x280, sat on the right, faded left |
-| `header-terminal.svg` | `download (3).jpg` | cropped above the lettering, blurred, darkened |
+| `header-terminal.svg` | `Screenshot 2026-09-08 214835.png` | cropped to 3.57:1, lightly blurred and darkened |
 | `footer-wave.svg` | `download (4).jpg` | scaled to 1000x333, cropped to a 170 px band |
 
 ```bash
 ffmpeg -i "download (1).jpg" -vf "scale=630:280:flags=lanczos,eq=brightness=-0.04:contrast=1.06" -q:v 4 statue.jpg
-ffmpeg -i "download (3).jpg" -vf "crop=518:134:110:0,scale=1000:280:flags=lanczos,gblur=sigma=4,eq=brightness=-0.14:contrast=0.95" -q:v 4 clouds.jpg
+ffmpeg -i "Screenshot 2026-09-08 214835.png" -vf "crop=1362:382:0:70,scale=1000:280:flags=lanczos,gblur=sigma=1.2,eq=brightness=-0.09:contrast=1.02" -q:v 4 angel.jpg
 ffmpeg -i "download (4).jpg" -vf "scale=1000:333:flags=lanczos,crop=1000:170:0:96,eq=brightness=-0.05" -q:v 4 horses.jpg
 ```
 
@@ -293,10 +293,12 @@ however long the budget. To check geometry, freeze the pieces at their extremes 
 #bb-p3 { transform: translateY(6px); }
 ```
 
-**The clouds' crop.** `download (3).jpg` has "GOD'S PLAN" set across its middle. Scaled to fill
-the header, that lettering lands exactly on the typed `user` and `role` lines. Blurring it was
-not enough - it stayed legible and fought the terminal text - so the crop takes the clouds above
-it instead. If you want the lettering back, it needs to sit clear of x 46-540, y 86-215.
+**The angel's framing.** The typed lines occupy x 46-540, y 86-215, and the statue's bright
+marble starts around x 540, so the two never cross - measured, not eyeballed: that region reads
+a mean luma of 12 with under 3% of pixels above 120. That is why the scrim over this image is
+0.34 rather than the 0.55 the clouds needed; the marble can stay bright because nothing is set
+on top of it. Reframing the crop means re-checking that number, or the text starts fighting the
+picture.
 
 ## 9. Optional extras
 
