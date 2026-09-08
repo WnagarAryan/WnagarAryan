@@ -82,9 +82,15 @@ it is a hobby-tier Vercel deployment that regularly hits its limits and serves e
 The same is true, less often, for `github-readme-stats.vercel.app` and
 `github-profile-summary-cards.vercel.app`.
 
+This is not hypothetical: **github-profile-trophy** and **github-readme-activity-graph** are
+both returning HTTP 402 for every user as of the last check — their Vercel deployments are
+over quota — and **github-readme-stats** was returning 503. The trophy and activity-graph
+sections are commented out in `README.md` for that reason, and the stats cards were moved to
+a mirror of the same codebase (`github-readme-stats-two-beta-28.vercel.app`).
+
 Two options when one dies:
 
-1. Delete that section.
+1. Delete or comment out that section.
 2. Self-host it. Fork the upstream repo, deploy it to your own Vercel account for free,
    and swap the hostname in the README. This is exactly what the `Joaninnn` sample does
    (`github-readme-stats-two-beta-28.vercel.app` is their own fork).
@@ -135,22 +141,21 @@ drawtext=fontfile='C\:/Windows/Fonts/consolab.ttf':text='AI SYSTEM ARCHITECT  | 
 `crop=1920:640:0:220` takes a 640 px tall band starting 220 px down the 1080p frame. Move
 that last number to reframe; raise `-q:v` for better quality and a bigger file.
 
-### The brain in the About Me sidebar
+### The forest in the About Me sidebar
 
-`assets/brain-pulse.svg` is a still PNG animated in SVG rather than re-encoded as a video.
-The photo is downscaled to 470 px, saved as JPEG, and embedded as a base64 data URI, so the
-file is self-contained at 124 KB and the motion — the breath, the two counter-rotating ray
-fans, the swelling core, the 12 firing synapses — is CSS on top of it.
+`assets/forest-mist.svg` is a still photo animated in SVG rather than re-encoded as a video.
+The image is cropped to 576x860, downscaled to 440 px wide, saved as JPEG and embedded as a
+base64 data URI, so the file is self-contained at 32 KB and the motion — the breath, the
+three drifting fog banks, the floating motes — is CSS on top of it.
 
-Swapping in a different image means regenerating the file: resize it the same way
+Swapping in a different image means regenerating the file:
 
 ```bash
-ffmpeg -i <your-image> -vf "crop=1069:1300:0:80,scale=470:-2:flags=lanczos" -q:v 4 brain.jpg
+ffmpeg -i <your-image> -vf "crop=576:860:0:340,scale=440:-2:flags=lanczos" -q:v 4 forest.jpg
 ```
 
-then base64 it and replace the `href="data:image/jpeg;base64,..."` value in the SVG. The
-spark coordinates near the bottom of the file are positioned over *this* brain, so a
-different image needs them moved.
+then base64 it and replace the `href="data:image/jpeg;base64,..."` value in the SVG. Crop
+values must stay within the source dimensions or ffmpeg refuses the filter outright.
 
 Remote images do not work here. GitHub serves the SVG through its camo proxy, and an SVG
 loaded as an `<img>` cannot fetch anything external — that is the same restriction the
