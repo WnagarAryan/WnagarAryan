@@ -145,30 +145,30 @@ drawtext=fontfile=asb.ttf:text='AI SYSTEM ARCHITECT  |  ML \& AGENTIC AI':fontco
 `crop=1920:640:0:220` takes a 640 px tall band starting 220 px down the 1080p frame. Move
 that last number to reframe; raise `-q:v` for better quality and a bigger file.
 
-### The forest in the About Me sidebar
+### The word in the About Me sidebar
 
-`assets/forest-mist.svg` is a still photo animated in SVG rather than re-encoded as a video.
-The image is cropped to 576x1094, downscaled to 440 px wide, saved as JPEG and embedded as a
-base64 data URI, so the file is self-contained at 36 KB and the motion — the breath, the
-three drifting fog banks, the floating motes — is CSS on top of it.
+`assets/perspective.svg` is `download (5).jpg` rebuilt as live type rather than embedded as a
+picture. A JPEG of the word could only ever be pushed around as one rectangle; setting it as
+real text is what lets each letter move on its own.
 
-Swapping in a different image means regenerating the file:
+The word is vertical with every glyph turned a quarter turn, so "arranged" means
+`rotate(90deg)` at zero offset. Each letter carries its own keyframes - where it spins in from,
+how far round, and where it leaves to - listed in `SCATTER` in the generator. They are fixed
+values rather than random so the file rebuilds identically, and the eleven letters are staggered
+0.13 s apart so the word assembles as a cascade. 12 s loop: in by 30%, held to 76%, gone by 95%.
 
-```bash
-ffmpeg -i <your-image> -vf "crop=576:1094:0:110,scale=440:-2:flags=lanczos" -q:v 4 forest.jpg
+The face is Josefin Sans Light, subsetted to the eight glyphs `PERSCTIV` - 1.6 KB.
+
+One detail worth keeping. The rule is
+
+```css
+.pv-l { transform: rotate(90deg); animation: 12s ease-in-out infinite; }
 ```
 
-then base64 it and replace the `href="data:image/jpeg;base64,..."` value in the SVG. Crop
-values must stay within the source dimensions or ffmpeg refuses the filter outright.
-
-The aspect ratio is deliberate. The README renders this at `width="100%"` so it fills its
-table cell, and roughly 1:1.9 is what it takes to match the height of the code block beside
-it. A squarer crop leaves dead space under the image; a taller one pushes the row past the
-code block and moves the gap to the other side.
-
-Remote images do not work here. GitHub serves the SVG through its camo proxy, and an SVG
-loaded as an `<img>` cannot fetch anything external — that is the same restriction the
-Pac-Man workflow works around by inlining its ghost sprites.
+and deliberately **not** `animation: ... both`. With `both`, anything that does not run the
+animation parks every letter at frame 0, which is scattered and `opacity: 0` - an empty panel.
+Leaving fill-mode alone means the element's own `rotate(90deg)` is what shows, so a
+non-animating renderer displays the assembled word instead of nothing.
 
 ## 6. Fonts
 

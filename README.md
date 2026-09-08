@@ -71,7 +71,7 @@ const aryan = {
 </td>
 <td width="42%" align="center">
 
-<img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/forest-mist.svg" alt=""/>
+<img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/perspective.svg" alt=""/>
 
 </td>
 </tr>

@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="836" viewBox="0 0 440 836" role="img" aria-label="Perspective">
+  <title>perspective</title>
+  <defs>
+    <radialGradient id="pv-vig" cx="50%" cy="45%" r="62%">
+      <stop offset="0%"   stop-color="#151917" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#0e1110" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#070908" stop-opacity="1"/>
+    </radialGradient>
+
+    <clipPath id="pv-clip"><rect width="440" height="836" rx="16"/></clipPath>
+
+    <style>
+      @font-face {
+        font-family:'JosefinEmbedded'; font-style:normal; font-weight:300;
+        src:url(data:font/woff;base64,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) format('woff');
+      }
+
+      /* the word is set vertically with every glyph turned a quarter turn, so
+         "arranged" means rotate(90deg) with no offset - each letter spins in
+         from its own direction and settles there */
+      .pv-l text {
+        font-family:'JosefinEmbedded','Josefin Sans','Century Gothic',
+                    'Futura','Segoe UI',sans-serif;
+        font-size:44px; font-weight:300; fill:#f2f2ee; letter-spacing:2px;
+      }
+      .pv-l {
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: rotate(90deg);
+        animation: 12s ease-in-out infinite;
+      }
+      @keyframes pv-k0 {
+        0%   { transform: translate(-86px,-54px) rotate(-170deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(74px,38px) rotate(268deg); opacity:0 }
+        100% { transform: translate(74px,38px) rotate(268deg); opacity:0 }
+      }
+      @keyframes pv-k1 {
+        0%   { transform: translate(92px,-38px) rotate(262deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(-68px,-46px) rotate(-184deg); opacity:0 }
+        100% { transform: translate(-68px,-46px) rotate(-184deg); opacity:0 }
+      }
+      @keyframes pv-k2 {
+        0%   { transform: translate(-64px,46px) rotate(-226deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(88px,-52px) rotate(246deg); opacity:0 }
+        100% { transform: translate(88px,-52px) rotate(246deg); opacity:0 }
+      }
+      @keyframes pv-k3 {
+        0%   { transform: translate(78px,58px) rotate(198deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(-74px,44px) rotate(-212deg); opacity:0 }
+        100% { transform: translate(-74px,44px) rotate(-212deg); opacity:0 }
+      }
+      @keyframes pv-k4 {
+        0%   { transform: translate(-96px,-30px) rotate(284deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(62px,56px) rotate(176deg); opacity:0 }
+        100% { transform: translate(62px,56px) rotate(176deg); opacity:0 }
+      }
+      @keyframes pv-k5 {
+        0%   { transform: translate(68px,-62px) rotate(-198deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(-84px,-34px) rotate(232deg); opacity:0 }
+        100% { transform: translate(-84px,-34px) rotate(232deg); opacity:0 }
+      }
+      @keyframes pv-k6 {
+        0%   { transform: translate(-72px,52px) rotate(236deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(76px,-48px) rotate(-206deg); opacity:0 }
+        100% { transform: translate(76px,-48px) rotate(-206deg); opacity:0 }
+      }
+      @keyframes pv-k7 {
+        0%   { transform: translate(88px,34px) rotate(-262deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(-62px,50px) rotate(188deg); opacity:0 }
+        100% { transform: translate(-62px,50px) rotate(188deg); opacity:0 }
+      }
+      @keyframes pv-k8 {
+        0%   { transform: translate(-58px,-48px) rotate(208deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(82px,42px) rotate(-244deg); opacity:0 }
+        100% { transform: translate(82px,42px) rotate(-244deg); opacity:0 }
+      }
+      @keyframes pv-k9 {
+        0%   { transform: translate(74px,64px) rotate(-184deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(-70px,-56px) rotate(214deg); opacity:0 }
+        100% { transform: translate(-70px,-56px) rotate(214deg); opacity:0 }
+      }
+      @keyframes pv-k10 {
+        0%   { transform: translate(-90px,28px) rotate(248deg); opacity:0 }
+        7%   { opacity:1 }
+        30%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        76%  { transform: translate(0,0) rotate(90deg); opacity:1 }
+        95%  { transform: translate(66px,36px) rotate(-172deg); opacity:0 }
+        100% { transform: translate(66px,36px) rotate(-172deg); opacity:0 }
+      }
+
+      #pv-0  { animation-name: pv-k0; }
+      #pv-1  { animation-name: pv-k1; }
+      #pv-2  { animation-name: pv-k2; }
+      #pv-3  { animation-name: pv-k3; }
+      #pv-4  { animation-name: pv-k4; }
+      #pv-5  { animation-name: pv-k5; }
+      #pv-6  { animation-name: pv-k6; }
+      #pv-7  { animation-name: pv-k7; }
+      #pv-8  { animation-name: pv-k8; }
+      #pv-9  { animation-name: pv-k9; }
+      #pv-10 { animation-name: pv-k10; }
+      #pv-0 { animation-delay: 0.00s; }
+      #pv-1 { animation-delay: 0.13s; }
+      #pv-2 { animation-delay: 0.26s; }
+      #pv-3 { animation-delay: 0.39s; }
+      #pv-4 { animation-delay: 0.52s; }
+      #pv-5 { animation-delay: 0.65s; }
+      #pv-6 { animation-delay: 0.78s; }
+      #pv-7 { animation-delay: 0.91s; }
+      #pv-8 { animation-delay: 1.04s; }
+      #pv-9 { animation-delay: 1.17s; }
+      #pv-10 { animation-delay: 1.30s; }
+
+      @keyframes pv-hair { 0%,100%{ opacity:.18 } 50%{ opacity:.5 } }
+      #pv-rule { animation: pv-hair 12s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#pv-clip)">
+    <rect width="440" height="836" fill="url(#pv-vig)"/>
+    <line id="pv-rule" x1="220" y1="60" x2="220" y2="96" stroke="#f2f2ee" stroke-width="1"/>
+    <line id="pv-rule2" x1="220" y1="740" x2="220" y2="776" stroke="#f2f2ee" stroke-width="1" opacity="0.25"/>
+    <g transform="translate(220,128)"><g class="pv-l" id="pv-0"><text text-anchor="middle" dominant-baseline="central">P</text></g></g>
+    <g transform="translate(220,186)"><g class="pv-l" id="pv-1"><text text-anchor="middle" dominant-baseline="central">E</text></g></g>
+    <g transform="translate(220,244)"><g class="pv-l" id="pv-2"><text text-anchor="middle" dominant-baseline="central">R</text></g></g>
+    <g transform="translate(220,302)"><g class="pv-l" id="pv-3"><text text-anchor="middle" dominant-baseline="central">S</text></g></g>
+    <g transform="translate(220,360)"><g class="pv-l" id="pv-4"><text text-anchor="middle" dominant-baseline="central">P</text></g></g>
+    <g transform="translate(220,418)"><g class="pv-l" id="pv-5"><text text-anchor="middle" dominant-baseline="central">E</text></g></g>
+    <g transform="translate(220,476)"><g class="pv-l" id="pv-6"><text text-anchor="middle" dominant-baseline="central">C</text></g></g>
+    <g transform="translate(220,534)"><g class="pv-l" id="pv-7"><text text-anchor="middle" dominant-baseline="central">T</text></g></g>
+    <g transform="translate(220,592)"><g class="pv-l" id="pv-8"><text text-anchor="middle" dominant-baseline="central">I</text></g></g>
+    <g transform="translate(220,650)"><g class="pv-l" id="pv-9"><text text-anchor="middle" dominant-baseline="central">V</text></g></g>
+    <g transform="translate(220,708)"><g class="pv-l" id="pv-10"><text text-anchor="middle" dominant-baseline="central">E</text></g></g>
+  </g>
+</svg>
