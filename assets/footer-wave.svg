@@ -46,7 +46,7 @@
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <clipPath id="fw-clip"><rect width="1000" height="170"/></clipPath>
+    <clipPath id="fw-clip"><rect width="1000" height="170" rx="18"/></clipPath>
 
     <linearGradient id="fw-vfade" gradientUnits="userSpaceOnUse" x1="0" y1="116" x2="0" y2="170">
       <stop offset="0%"   stop-color="#fff" stop-opacity="0"/>

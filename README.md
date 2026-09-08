@@ -183,20 +183,26 @@ const aryan = {
 
 <td width="50%" align="center">
   <a href="https://github.com/WnagarAryan/FraudLens-Project-Showcase">
-    <img width="100%" src="https://gh-card.dev/repos/WnagarAryan/FraudLens-Project-Showcase.svg"></a>
-  <br>
-  <sub>Explainable fraud detection - SHAP attributions fed to an LLM for analyst-readable reasons. <b>7&times; lift in fraud rate</b> over the unranked baseline.</sub>
+    <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/project-fraudlens.svg" alt="FraudLens"/></a>
   <br><br>
-  <a href="https://fraudlens-project-showcase.onrender.com"><img src="https://img.shields.io/badge/LIVE_DEMO-46E3B7?style=for-the-badge&logo=render&logoColor=black"/></a>
+  <sub>Explainable ML for job-scam detection - LinearSVC over TF-IDF with a SHAP attribution
+  behind every verdict, trained on 17,880 EMSCAD postings. <b>7&times; lift in fraud rate</b>
+  over the unranked baseline.</sub>
+  <br><br>
+  <a href="https://fraudlens-project-showcase.onrender.com"><img src="https://img.shields.io/badge/LIVE_DEMO-0E1215?style=for-the-badge&logo=render&logoColor=4D9EFF&labelColor=4D9EFF&color=0E1215"/></a>
+  <a href="https://github.com/WnagarAryan/FraudLens-Project-Showcase"><img src="https://img.shields.io/badge/CODE-0E1215?style=for-the-badge&logo=github&logoColor=E8E8E8"/></a>
 </td>
 
 <td width="50%" align="center">
   <a href="https://github.com/WnagarAryan/Kuberis">
-    <img width="100%" src="https://gh-card.dev/repos/WnagarAryan/Kuberis.svg"></a>
-  <br>
-  <sub>AI business-intelligence agent - Pandas analysis driven by a LangChain/Groq insight engine, answering questions over a dataset in plain language.</sub>
+    <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/project-kuberis.svg" alt="Kuberis"/></a>
   <br><br>
-  <a href="https://kuberis-ai-business-intelligence-agent.onrender.com/"><img src="https://img.shields.io/badge/LIVE_DEMO-46E3B7?style=for-the-badge&logo=render&logoColor=black"/></a>
+  <sub>Reads any CSV or Excel file, tallies the metrics that matter, then answers plain-English
+  questions about the data with an LLM (Groq / Llama 3.3). FastAPI backend, custom frontend -
+  no dashboard framework boilerplate.</sub>
+  <br><br>
+  <a href="https://kuberis-ai-business-intelligence-agent.onrender.com/"><img src="https://img.shields.io/badge/LIVE_DEMO-14293E?style=for-the-badge&logo=render&logoColor=14293E&labelColor=A9832F&color=14293E"/></a>
+  <a href="https://github.com/WnagarAryan/Kuberis"><img src="https://img.shields.io/badge/CODE-14293E?style=for-the-badge&logo=github&logoColor=E4DDCF"/></a>
 </td>
 
 </tr>

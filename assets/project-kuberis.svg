@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="230" viewBox="0 0 520 230" role="img" aria-label="Kuberis">
+  <title>Kuberis</title>
+  <defs>
+    <clipPath id="kb-clip"><rect width="520" height="230" rx="16"/></clipPath>
+    <style>
+      @font-face {
+        font-family:'KBSerif'; font-style:normal; font-weight:700;
+        src:url(data:font/woff;base64,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) format('woff');
+      }
+      .kb-serif { font-family:'KBSerif','Playfair Display',Georgia,'Times New Roman',serif; }
+      .kb-mono  { font-family:'Courier New',Consolas,monospace; letter-spacing:1.4px; }
+
+      /* a ruled ledger should sit still - the only motion is the rule being
+         drawn under the wordmark, and the caret at the end of the line */
+      @keyframes kb-draw  { 0%{ stroke-dashoffset:250 } 55%,100%{ stroke-dashoffset:0 } }
+      @keyframes kb-blink { 0%,49%{ opacity:1 } 50%,100%{ opacity:0 } }
+
+      #kb-rule { stroke-dasharray:250; animation: kb-draw 7s ease-in-out infinite; }
+      #kb-cur  { animation: kb-blink 1.1s step-end infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#kb-clip)">
+    <rect width="520" height="230" fill="#e4ddcf"/>
+
+    <g stroke="#d6cdb9" stroke-width="1">
+      <line x1="0" y1="26" x2="520" y2="26"/>
+      <line x1="0" y1="52" x2="520" y2="52"/>
+      <line x1="0" y1="78" x2="520" y2="78"/>
+      <line x1="0" y1="104" x2="520" y2="104"/>
+      <line x1="0" y1="130" x2="520" y2="130"/>
+      <line x1="0" y1="156" x2="520" y2="156"/>
+      <line x1="0" y1="182" x2="520" y2="182"/>
+      <line x1="0" y1="208" x2="520" y2="208"/>
+    </g>
+
+    <g class="kb-mono" font-size="9.5" fill="#a9832f">
+      <text x="20" y="26">01 &#8212; NEW ENTRY</text>
+      <text x="500" y="26" text-anchor="end">READS CSV / EXCEL</text>
+      <text x="20" y="210">PANDAS &#183; LANGCHAIN &#183; GROQ</text>
+    </g>
+    <text class="kb-mono" x="500" y="210" text-anchor="end" font-size="9.5" fill="#8c8474">v1.0</text>
+
+    <text class="kb-serif" x="260" y="128" text-anchor="middle" font-size="42" font-weight="700"
+          fill="#14293e">&#167; Kuberis</text>
+
+    <line id="kb-rule" x1="135" y1="144" x2="385" y2="144" stroke="#14293e" stroke-width="1.5" stroke-opacity="0.55"/>
+
+    <text class="kb-mono" x="260" y="170" text-anchor="middle" font-size="9" fill="#a9832f">
+      AI BUSINESS INTELLIGENCE &#183; READ THE NUMBERS, ASK THE QUESTIONS
+    </text>
+    <rect id="kb-cur" x="474" y="120" width="3" height="14" fill="#a9832f"/>
+  </g>
+  <rect x="0.75" y="0.75" width="518.5" height="228.5" rx="15.25" fill="none" stroke="#c9bfa8" stroke-width="1.5"/>
+</svg>

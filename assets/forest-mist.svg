@@ -14,7 +14,7 @@
       <stop offset="100%" stop-color="#cfd6d0" stop-opacity="0"/>
     </radialGradient>
 
-    <clipPath id="fm-clip"><rect width="440" height="836" rx="14"/></clipPath>
+    <clipPath id="fm-clip"><rect width="440" height="836" rx="16"/></clipPath>
 
     <style>
       /* the photo is already still and soft - all this adds is a slow breath,

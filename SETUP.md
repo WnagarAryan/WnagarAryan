@@ -214,7 +214,29 @@ and regenerate both subsets before adding an accent or an em dash to any SVG.
 reading as a terminal, and its typing animation is built on a fixed 10.5 px advance per
 character - every clip width and cursor keyframe in section 2 derives from that number.
 
-## 7. Optional extras
+## 7. Project banners
+
+`assets/project-fraudlens.svg` and `assets/project-kuberis.svg` are hand-built to each app's
+own theme rather than pulled from `gh-card.dev`, whose cards render white and read as foreign
+objects on a dark profile.
+
+| | FraudLens | Kuberis |
+|---|---|---|
+| ground | `#0e1215` | `#e4ddcf` ruled paper |
+| ink | `#d9e1e6` | `#14293e` |
+| accent | `#4d9eff` | `#a9832f` |
+| keyline | `#e8e8e8` | `#c9bfa8` |
+| display face | Archivo SemiBold (embedded) | Playfair Display Bold (embedded, 2.2 KB) |
+
+Both are 520x230 and rendered at `width="100%"`, so they scale to whatever the table cell is.
+Colours were sampled from the running apps, not guessed.
+
+One caution learned the hard way: a CSS animation whose opacity starts at `0` left the Kuberis
+subtitle invisible in every frame sampled, at every phase, with the keyframes both renamed and
+simplified. The cause was never isolated, so that line is static. If you animate text in these
+files, animate between two non-zero opacities and check a render before trusting it.
+
+## 8. Optional extras
 
 Not wired up, but drop-in if you want them:
 
