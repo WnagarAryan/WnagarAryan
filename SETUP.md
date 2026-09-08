@@ -236,7 +236,41 @@ subtitle invisible in every frame sampled, at every phase, with the keyframes bo
 simplified. The cause was never isolated, so that line is static. If you animate text in these
 files, animate between two non-zero opacities and check a render before trusting it.
 
-## 8. Optional extras
+## 8. The photographic set
+
+Four of the SVGs are built around photographs rather than drawn from scratch. Each embeds its
+image as a base64 JPEG, for the same reason the sidebar does: an SVG rendered through camo
+cannot fetch anything external.
+
+| File | Source | Treatment |
+|---|---|---|
+| `banner-bust.svg` | `download (2).jpg` | scaled to 676x380, blacks crushed to zero |
+| `header-neon.svg` | `download (1).jpg` | scaled to 630x280, sat on the right, faded left |
+| `header-terminal.svg` | `download (3).jpg` | cropped above the lettering, blurred, darkened |
+| `footer-wave.svg` | `download (4).jpg` | scaled to 1000x333, cropped to a 170 px band |
+
+```bash
+ffmpeg -i "download (2).jpg" -vf "scale=676:380:flags=lanczos,curves=all='0/0 0.15/0 0.38/0.42 0.7/0.78 1/1',eq=brightness=0.035:saturation=1.1" -q:v 3 bust.jpg
+ffmpeg -i "download (1).jpg" -vf "scale=630:280:flags=lanczos,eq=brightness=-0.04:contrast=1.06" -q:v 4 statue.jpg
+ffmpeg -i "download (3).jpg" -vf "crop=518:134:110:0,scale=1000:280:flags=lanczos,gblur=sigma=4,eq=brightness=-0.14:contrast=0.95" -q:v 4 clouds.jpg
+ffmpeg -i "download (4).jpg" -vf "scale=1000:333:flags=lanczos,crop=1000:170:0:96,eq=brightness=-0.05" -q:v 4 horses.jpg
+```
+
+Two of those treatments are load-bearing, not taste.
+
+**The bust's `curves`.** The banner cuts the photo into three bands and slides them apart. The
+photo's background is dark but not black, and the slices are screen-blended, so a shifted band
+no longer lined up with its neighbour's background luminance and drew a bright horizontal seam
+straight across all 1000 px. Crushing everything below 0.15 to pure black makes screen blending
+contribute nothing there, and the seams vanish. Too aggressive a curve (0.30) also swallows the
+bust, so the numbers matter.
+
+**The clouds' crop.** `download (3).jpg` has "GOD'S PLAN" set across its middle. Scaled to fill
+the header, that lettering lands exactly on the typed `user` and `role` lines. Blurring it was
+not enough - it stayed legible and fought the terminal text - so the crop takes the clouds above
+it instead. If you want the lettering back, it needs to sit clear of x 46-540, y 86-215.
+
+## 9. Optional extras
 
 Not wired up, but drop-in if you want them:
 

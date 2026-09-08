@@ -1,23 +1,26 @@
-<!-- ============ MASTHEAD (firing neurons + nameplate, animated WebP) ============ -->
+<!-- ============ MASTHEAD (severed bust, three slices adrift) ============ -->
 <p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons-titled.webp" alt="Aryan Nagar"/>
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-bust.svg" alt="Aryan Nagar"/>
+</p>
+
+<!-- ============ NAMEPLATE ============ -->
+<p align="center">
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-neon.svg" alt="Aryan Nagar"/>
+</p>
+
+<!-- ============ TERMINAL ============ -->
+<p align="center">
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/>
 </p>
 
 <!--
-  ALTERNATIVES - swap in whichever you prefer.
+  ALTERNATIVE MASTHEADS - the neurons clip, kept from the earlier version.
 
-  Clean banner with no text burned in, paired with the animated terminal header
-  that types out the same name and role:
+  With the name burned into the frames:
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons-titled.webp" alt="Aryan Nagar"/>
+
+  Clean, no text:
   <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons.webp" alt="Aryan Nagar"/>
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/>
-
-  Neural-nameplate SVG - name in a sweeping gradient between two synapse clusters:
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-neon.svg" alt="Aryan Nagar"/>
-
-  GIF fallback of the clean banner - 5.5 MB instead of 1.1 MB, and visibly
-  banded, since 96 colors cannot hold the blue gradient. Only worth using if
-  something in your audience's setup refuses animated WebP:
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons.gif" alt="Aryan Nagar"/>
 -->
 
 <p align="center">
