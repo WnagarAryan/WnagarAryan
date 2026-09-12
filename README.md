@@ -1,8 +1,13 @@
 <!-- ============ MASTHEAD / NAMEPLATE / TERMINAL ============ -->
-<div align="center"><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-bust.svg" alt="Aryan Nagar"/><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-neon.svg" alt="Aryan Nagar"/><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/></div>
+<div align="center"><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-neon.svg" alt="Aryan Nagar"/><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/></div>
 
 <!--
-  ALTERNATIVE MASTHEADS - the neurons clip, kept from the earlier version.
+  ALTERNATIVE MASTHEADS - pulled from the stack, assets still in the repo.
+
+  The severed bust, three pieces adrift:
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-bust.svg" alt="Aryan Nagar"/>
+
+  The neurons clip, kept from the earlier version.
 
   With the name burned into the frames:
   <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-neurons-titled.webp" alt="Aryan Nagar"/>
