@@ -47,10 +47,11 @@ const aryan = {
     location: "Jaipur, Rajasthan, India 🇮🇳",
 
     building: [
-        "Krex-TDE  - agentic real-time threat detection",
         "Kuberis   - AI business intelligence agent",
         "FraudLens - explainable fraud detection"
     ],
+
+    next: "ML for aerospace - predictive maintenance on engine sensor data",
 
     learning: [
         "Advanced Learning Algorithms",
@@ -199,38 +200,6 @@ const aryan = {
   <br><br>
   <a href="https://kuberis-ai-business-intelligence-agent.onrender.com/"><img src="https://img.shields.io/badge/LIVE_DEMO-14293E?style=for-the-badge&logo=render&logoColor=14293E&labelColor=A9832F&color=14293E"/></a>
   <a href="https://github.com/WnagarAryan/Kuberis"><img src="https://img.shields.io/badge/CODE-14293E?style=for-the-badge&logo=github&logoColor=E4DDCF"/></a>
-</td>
-
-</tr>
-<tr>
-
-<td width="50%" align="center">
-  <br>
-  <h3>🛡️ Krex-TDE</h3>
-  <img src="https://img.shields.io/badge/FLAGSHIP-8B5CF6?style=for-the-badge&logoColor=white"/>
-  <img src="https://img.shields.io/badge/IN_PROGRESS-F59E0B?style=for-the-badge&logoColor=white"/>
-  <br><br>
-  <sub>Agentic, explainable threat detection on live network telemetry - streaming ingest into
-  TimescaleDB, model scoring, and an agent that explains <i>why</i> a flow was flagged.</sub>
-  <br><br>
-  <img src="https://img.shields.io/badge/LangGraph-14532D?style=flat-square&logo=langgraph&logoColor=white"/>
-  <img src="https://img.shields.io/badge/TimescaleDB-FDB515?style=flat-square&logo=timescale&logoColor=black"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
-  <br><br>
-</td>
-
-<td width="50%" align="center">
-  <br>
-  <h3>✈️ JetSense</h3>
-  <img src="https://img.shields.io/badge/RESEARCH-38BDF8?style=for-the-badge&logoColor=white"/>
-  <br><br>
-  <sub>Remaining-useful-life prediction on turbofan engine sensor data - framing degradation as a
-  sequence problem and testing how early a failure can be called with acceptable precision.</sub>
-  <br><br>
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
-  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
-  <br><br>
 </td>
 
 </tr>
