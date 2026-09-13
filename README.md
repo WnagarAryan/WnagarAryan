@@ -284,16 +284,6 @@ const aryan = {
 <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" alt=""/>
 
 <p align="center">
-  <i>"Ask, and it will be given to you.</i>
-  <br>
-  <i>Seek, and you will find.</i>
-  <br>
-  <i>Knock, and it will be opened to you."</i>
-  <br>
-  <sub>&mdash; Matthew 7:7</sub>
-</p>
-
-<p align="center">
   <i>"The only true wisdom is in knowing you know nothing."</i>
   <br>
   <sub>&mdash; Socrates</sub>
