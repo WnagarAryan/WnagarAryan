@@ -284,9 +284,7 @@ const aryan = {
 <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" alt=""/>
 
 <p align="center">
-  <i>"The only true wisdom is in knowing you know nothing."</i>
-  <br>
-  <sub>&mdash; Socrates</sub>
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/quote-socrates.svg" alt="The only true wisdom is in knowing you know nothing. - Socrates"/>
 </p>
 
 <!-- ============ FOOTER (custom animated SVG) ============ -->
