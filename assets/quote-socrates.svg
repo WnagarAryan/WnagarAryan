@@ -22,16 +22,12 @@
       <stop offset="100%" stop-color="#c95a7a" stop-opacity="0"/>
     </linearGradient>
 
-    <clipPath id="qt-clip"><rect width="1000" height="230" rx="16"/></clipPath>
+    <filter id="qt-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
 
-    <!-- Typewriter by clip, not by CSS: a SMIL width animation renders in every
-         SVG engine, and it is the same mechanism the terminal header uses. -->
-    <clipPath id="qt-c1"><rect x="255" y="46" width="0" height="52">
-      <animate attributeName="width" values="0;0;500;500;500" keyTimes="0;0.04;0.34;0.94;1" dur="11s" repeatCount="indefinite"/>
-    </rect></clipPath>
-    <clipPath id="qt-c2"><rect x="236" y="104" width="0" height="52">
-      <animate attributeName="width" values="0;0;536;536;536" keyTimes="0;0.36;0.64;0.94;1" dur="11s" repeatCount="indefinite"/>
-    </rect></clipPath>
+    <clipPath id="qt-clip"><rect width="1000" height="230" rx="16"/></clipPath>
 
     <style>
       @font-face {
@@ -49,12 +45,8 @@
   <g clip-path="url(#qt-clip)">
     <rect width="1000" height="230" fill="url(#qt-bg)"/>
 
-    <g clip-path="url(#qt-c1)">
-      <text class="qt-font qt-line" x="500" y="84" text-anchor="middle">"The only true wisdom is in</text>
-    </g>
-    <g clip-path="url(#qt-c2)">
-      <text class="qt-font qt-line" x="500" y="142" text-anchor="middle">knowing you know nothing."</text>
-    </g>
+    <text class="qt-font qt-line" x="500" y="84"  text-anchor="middle" filter="url(#qt-glow)">"The only true wisdom is in</text>
+    <text class="qt-font qt-line" x="500" y="142" text-anchor="middle" filter="url(#qt-glow)">knowing you know nothing."</text>
 
     <rect id="qt-rule-bar" x="390" y="168" width="220" height="1.5" rx="0.75" fill="url(#qt-rule)"/>
 
