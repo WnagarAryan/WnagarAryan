@@ -35,10 +35,6 @@
 <!-- ============ ABOUT ============ -->
 ## 🎯 About Me
 
-<table>
-<tr>
-<td width="58%" valign="top">
-
 ```typescript
 const aryan = {
     name:     "Aryan Nagar",
@@ -74,21 +70,13 @@ const aryan = {
 
 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="quote"/>
 
-</td>
-<td width="42%" align="center">
-
-<img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/perspective.svg" alt=""/>
-
-</td>
-</tr>
-</table>
 
 <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" alt=""/>
 
 <!-- ============ TECH ============ -->
 ## 🛠️ Tech Arsenal
 
-<table align="center">
+<table align="center" width="100%">
 <tr>
 
 <td width="50%" align="center">
@@ -204,6 +192,38 @@ const aryan = {
 
 </tr>
 </table>
+
+<h3 align="center">How FraudLens works</h3>
+
+```mermaid
+flowchart LR
+    A["17,880 job postings<br/>EMSCAD"] --> B["TF-IDF<br/>vectorise"]
+    B --> C["LinearSVC<br/>classify"]
+    C --> D["SHAP<br/>attribution per verdict"]
+    D --> E["Ranked queue<br/>7x fraud-rate lift"]
+
+    style A fill:#0e1215,color:#9aa3ad,stroke:#4d9eff
+    style B fill:#0e1215,color:#d9e1e6,stroke:#4d9eff
+    style C fill:#0e1215,color:#d9e1e6,stroke:#4d9eff
+    style D fill:#14293E,color:#e8eefc,stroke:#4d9eff
+    style E fill:#0e1215,color:#4d9eff,stroke:#4d9eff
+```
+
+<h3 align="center">How Kuberis works</h3>
+
+```mermaid
+flowchart LR
+    A["CSV / Excel<br/>any dataset"] --> B["Pandas<br/>metrics + statistics"]
+    B --> C["LangChain / Groq<br/>reasoning over the numbers"]
+    C --> D["Plain-English answer"]
+    D --> E["FastAPI<br/>custom frontend"]
+
+    style A fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style B fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style C fill:#14293e,color:#e4ddcf,stroke:#a9832f
+    style D fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style E fill:#e4ddcf,color:#14293e,stroke:#a9832f
+```
 
 <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" alt=""/>
 
