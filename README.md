@@ -189,19 +189,32 @@ const aryan = {
 <h3 align="center">How FraudLens works</h3>
 
 ```mermaid
-flowchart LR
-    A["17,880 job postings"] --> B["TF-IDF + SMOTE<br/>5 algorithms benchmarked"]
-    B --> C["LinearSVC<br/>chosen on Fake-class F1"]
-    C --> D["SHAP + LangChain/Groq<br/>plain-English justification"]
-    D --> E["OpenCorporates · Tavily<br/>live company check"]
-    E --> F["34.2% vs 4.8%<br/>7x fraud-rate lift"]
+flowchart TB
+    A["17,880 job postings"] --> B["NLTK · TF-IDF · SMOTE<br/>clean, vectorise, rebalance"]
+    B --> C["5 algorithms benchmarked"]
+    C --> D["LinearSVC<br/>chosen on Fake-class F1"]
 
-    style A fill:#0e1215,color:#9aa3ad,stroke:#4d9eff
-    style B fill:#0e1215,color:#d9e1e6,stroke:#4d9eff
-    style C fill:#0e1215,color:#d9e1e6,stroke:#4d9eff
-    style D fill:#14293E,color:#e8eefc,stroke:#4d9eff
-    style E fill:#0e1215,color:#d9e1e6,stroke:#4d9eff
-    style F fill:#0e1215,color:#4d9eff,stroke:#4d9eff
+    D --> E1["SHAP<br/>feature attribution"]
+    D --> E2["Rule-based<br/>keyword detection"]
+    D --> E3["OpenCorporates · Tavily<br/>live company check"]
+
+    E1 --> F["LangChain / Groq<br/>plain-English justification"]
+    E2 --> F
+    E3 --> F
+
+    F --> G["Ranked queue<br/>34.2% vs 4.8%<br/>7x fraud-rate lift"]
+    G --> H["FastAPI · HTML/CSS/JS · Render"]
+
+    style A  fill:#0e1215,color:#9aa3ad,stroke:#3a4048
+    style B  fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style C  fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style D  fill:#14293E,color:#e8eefc,stroke:#4d9eff
+    style E1 fill:#0e1215,color:#4d9eff,stroke:#4d9eff
+    style E2 fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style E3 fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style F  fill:#14293E,color:#e8eefc,stroke:#4d9eff
+    style G  fill:#0e1215,color:#4d9eff,stroke:#4d9eff
+    style H  fill:#0e1215,color:#9aa3ad,stroke:#3a4048
 ```
 
 <h3 align="center">How Kuberis works</h3>
