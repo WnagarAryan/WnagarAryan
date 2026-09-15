@@ -17,7 +17,7 @@
 -->
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=760&lines=AI+System+Architect;ML%2C+Agentic+AI+%26+Data+Analytics;Final-year+B.Tech+CSE+%40+GIT+Jaipur;Open+to+ML+Engineering+Internships" alt="typing"/>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3200&pause=900&color=7AA2F7&center=true&vCenter=true&width=760&lines=Explainable+ML+%26+Agentic+AI+Systems;FraudLens+-+7x+fraud-rate+lift;Final-year+B.Tech+CSE+%40+GIT+Jaipur;Open+to+ML+%2F+Data+Science+%2F+Agentic+AI+Internships" alt="typing"/>
 </p>
 
 <p align="center">
@@ -38,31 +38,30 @@
 ```typescript
 const aryan = {
     name:     "Aryan Nagar",
-    role:     "AI System Architect",
+    focus:    "Explainable ML and agentic AI systems",
     study:    "B.Tech CSE '27 @ GIT Jaipur (RTU)",
     location: "Jaipur, Rajasthan, India 🇮🇳",
 
-    building: [
-        "Kuberis   - AI business intelligence agent",
-        "FraudLens - explainable fraud detection"
+    shipped: [
+        "FraudLens - explainable scam detection, 7x fraud-rate lift",
+        "Kuberis   - AI business intelligence agent"
     ],
 
-    next: "ML for aerospace - predictive maintenance on engine sensor data",
+    experience: "Agentic AI Intern @ Grras Solutions, May-Jul 2026",
 
     learning: [
         "Advanced Learning Algorithms",
-        "Neural Networks & Deep Learning",
-        "Agentic system design"
+        "Unsupervised Learning, Recommenders, Reinforcement Learning"
     ],
 
     stack: {
-        ml:       ["PyTorch", "TensorFlow", "Scikit-learn", "XGBoost"],
-        agentic:  ["LangChain", "LangGraph", "MCP", "Guardrails AI"],
-        backend:  ["FastAPI", "REST"],
-        database: ["PostgreSQL", "TimescaleDB", "pgvector"]
+        ml:      ["PyTorch", "Scikit-learn", "XGBoost", "SHAP"],
+        agentic: ["LangChain", "Groq", "Gemini API"],
+        data:    ["Pandas", "NumPy", "Matplotlib", "Seaborn", "NLTK"],
+        backend: ["FastAPI", "REST"]
     },
 
-    openTo: "Internship - ML Engineering / Data Science"
+    openTo: "Internship - ML Engineering / Data Science / Agentic AI"
 };
 ```
 
@@ -81,24 +80,19 @@ const aryan = {
 
 <td width="50%" align="center">
 
-<h3>🤖 AI / ML &amp; Agentic</h3>
-<img src="https://skillicons.dev/icons?i=pytorch,tensorflow&perline=7"/>
+<h3>🤖 Machine Learning &amp; AI</h3>
+<img src="https://skillicons.dev/icons?i=pytorch&perline=7"/>
 <br>
 <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
 <img src="https://img.shields.io/badge/XGBoost-337AB7?style=for-the-badge&logoColor=white"/>
 <img src="https://img.shields.io/badge/SHAP-1C3C3C?style=for-the-badge&logoColor=white"/>
 <br>
 <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white"/>
-<img src="https://img.shields.io/badge/LangGraph-14532D?style=for-the-badge&logo=langgraph&logoColor=white"/>
-<img src="https://img.shields.io/badge/MCP-000000?style=for-the-badge&logo=modelcontextprotocol&logoColor=white"/>
-<br>
-<img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black"/>
-<img src="https://img.shields.io/badge/Guardrails_AI-DC2626?style=for-the-badge&logoColor=white"/>
-<img src="https://img.shields.io/badge/NLTK-154F3C?style=for-the-badge&logoColor=white"/>
+<img src="https://img.shields.io/badge/AI_Agent_Development-14532D?style=for-the-badge&logoColor=white"/>
 
 <br><br>
 
-<h3>💻 Languages</h3>
+<h3>💻 Programming Languages</h3>
 <img src="https://skillicons.dev/icons?i=python,c,cpp&perline=6"/>
 <br>
 <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white"/>
@@ -107,42 +101,40 @@ const aryan = {
 
 <td width="50%" align="center">
 
-<h3>⚙️ Backend &amp; Data Layer</h3>
-<img src="https://skillicons.dev/icons?i=fastapi,postgres,docker&perline=6"/>
-<br>
-<img src="https://img.shields.io/badge/TimescaleDB-FDB515?style=for-the-badge&logo=timescale&logoColor=black"/>
-<img src="https://img.shields.io/badge/pgvector-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+<h3>⚙️ Backend &amp; APIs</h3>
+<img src="https://skillicons.dev/icons?i=fastapi&perline=6"/>
 <br>
 <img src="https://img.shields.io/badge/REST_API-02569B?style=for-the-badge&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logoColor=white"/>
+<br>
+<img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tavily-1C3C3C?style=for-the-badge&logoColor=white"/>
+<img src="https://img.shields.io/badge/OpenCorporates-0B4F6C?style=for-the-badge&logoColor=white"/>
 
 <br><br>
 
-<h3>📊 Analytics &amp; Interfaces</h3>
-<img src="https://skillicons.dev/icons?i=html,css,js,nextjs&perline=6"/>
-<br>
+<h3>📊 Data Analysis &amp; Visualisation</h3>
 <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
 <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
 <br>
 <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logoColor=white"/>
 <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logoColor=white"/>
-<br>
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
-<img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white"/>
+<img src="https://img.shields.io/badge/NLTK-154F3C?style=for-the-badge&logoColor=white"/>
 
 </td>
 
 </tr>
 </table>
 
-<h3 align="center">🧰 Tools, Cloud &amp; Workflow</h3>
+<h3 align="center">🧰 Tools, Platforms &amp; Cloud</h3>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=git,github,vscode,aws,vercel,postman,linux&perline=8"/>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,html,css,js&perline=8"/>
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&logo=claude&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
   <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black"/>
-  <img src="https://img.shields.io/badge/HF_Spaces-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black"/>
 </p>
 
 <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" alt=""/>
@@ -170,9 +162,10 @@ const aryan = {
   <a href="https://github.com/WnagarAryan/FraudLens-Project-Showcase">
     <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/project-fraudlens.svg" alt="FraudLens"/></a>
   <br><br>
-  <sub>Explainable ML for job-scam detection - LinearSVC over TF-IDF with a SHAP attribution
-  behind every verdict, trained on 17,880 EMSCAD postings. <b>7&times; lift in fraud rate</b>
-  over the unranked baseline.</sub>
+  <sub>Explainable ML for job-scam detection. Benchmarked 5 algorithms with SMOTE over 17,880
+  postings and selected LinearSVC on Fake-class F1; SHAP plus a LangChain/Groq layer explains
+  every verdict in plain English, backed by live company verification.
+  <b>7&times; fraud-rate lift - 34.2% against a 4.8% baseline.</b></sub>
   <br><br>
   <a href="https://fraudlens-project-showcase.onrender.com"><img src="https://img.shields.io/badge/LIVE_DEMO-0E1215?style=for-the-badge&logo=render&logoColor=4D9EFF&labelColor=4D9EFF&color=0E1215"/></a>
   <a href="https://github.com/WnagarAryan/FraudLens-Project-Showcase"><img src="https://img.shields.io/badge/CODE-0E1215?style=for-the-badge&logo=github&logoColor=E8E8E8"/></a>
@@ -182,9 +175,9 @@ const aryan = {
   <a href="https://github.com/WnagarAryan/Kuberis">
     <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/project-kuberis.svg" alt="Kuberis"/></a>
   <br><br>
-  <sub>Reads any CSV or Excel file, tallies the metrics that matter, then answers plain-English
-  questions about the data with an LLM (Groq / Llama 3.3). FastAPI backend, custom frontend -
-  no dashboard framework boilerplate.</sub>
+  <sub>Auto-classifies any uploaded CSV or Excel file and computes 10+ KPIs, then answers 8+
+  types of natural-language question through an insights engine on Groq Llama 3.3 70B.
+  FastAPI backend, custom JS frontend - no dashboard framework boilerplate.</sub>
   <br><br>
   <a href="https://kuberis-ai-business-intelligence-agent.onrender.com/"><img src="https://img.shields.io/badge/LIVE_DEMO-14293E?style=for-the-badge&logo=render&logoColor=14293E&labelColor=A9832F&color=14293E"/></a>
   <a href="https://github.com/WnagarAryan/Kuberis"><img src="https://img.shields.io/badge/CODE-14293E?style=for-the-badge&logo=github&logoColor=E4DDCF"/></a>
@@ -197,26 +190,28 @@ const aryan = {
 
 ```mermaid
 flowchart LR
-    A["17,880 job postings<br/>EMSCAD"] --> B["TF-IDF<br/>vectorise"]
-    B --> C["LinearSVC<br/>classify"]
-    C --> D["SHAP<br/>attribution per verdict"]
-    D --> E["Ranked queue<br/>7x fraud-rate lift"]
+    A["17,880 job postings"] --> B["TF-IDF + SMOTE<br/>5 algorithms benchmarked"]
+    B --> C["LinearSVC<br/>chosen on Fake-class F1"]
+    C --> D["SHAP + LangChain/Groq<br/>plain-English justification"]
+    D --> E["OpenCorporates · Tavily<br/>live company check"]
+    E --> F["34.2% vs 4.8%<br/>7x fraud-rate lift"]
 
     style A fill:#0e1215,color:#9aa3ad,stroke:#4d9eff
     style B fill:#0e1215,color:#d9e1e6,stroke:#4d9eff
     style C fill:#0e1215,color:#d9e1e6,stroke:#4d9eff
     style D fill:#14293E,color:#e8eefc,stroke:#4d9eff
-    style E fill:#0e1215,color:#4d9eff,stroke:#4d9eff
+    style E fill:#0e1215,color:#d9e1e6,stroke:#4d9eff
+    style F fill:#0e1215,color:#4d9eff,stroke:#4d9eff
 ```
 
 <h3 align="center">How Kuberis works</h3>
 
 ```mermaid
 flowchart LR
-    A["CSV / Excel<br/>any dataset"] --> B["Pandas<br/>metrics + statistics"]
-    B --> C["LangChain / Groq<br/>reasoning over the numbers"]
-    C --> D["Plain-English answer"]
-    D --> E["FastAPI<br/>custom frontend"]
+    A["CSV / Excel<br/>auto-classified"] --> B["Pandas<br/>10+ KPIs computed"]
+    B --> C["Groq Llama 3.3 70B<br/>insights engine"]
+    C --> D["8+ query types<br/>answered in plain English"]
+    D --> E["FastAPI<br/>custom JS frontend"]
 
     style A fill:#e4ddcf,color:#14293e,stroke:#a9832f
     style B fill:#e4ddcf,color:#14293e,stroke:#a9832f

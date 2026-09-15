@@ -22,7 +22,7 @@
       <animate attributeName="width" values="0;0;226;226;226" keyTimes="0;0.189;0.344;0.94;1" dur="9s" repeatCount="indefinite"/>
     </rect></clipPath>
     <clipPath id="tb-c3"><rect x="46" y="158" width="0" height="26">
-      <animate attributeName="width" values="0;0;498;498;498" keyTimes="0;0.367;0.589;0.94;1" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="width" values="0;0;476;476;476" keyTimes="0;0.367;0.589;0.94;1" dur="9s" repeatCount="indefinite"/>
     </rect></clipPath>
     <clipPath id="tb-c4"><rect x="46" y="194" width="0" height="26">
       <animate attributeName="width" values="0;0;172;172;172" keyTimes="0;0.611;0.722;0.94;1" dur="9s" repeatCount="indefinite"/>
@@ -73,7 +73,7 @@
         <text x="46" y="141"><tspan class="tb-prompt">&gt;</tspan><tspan class="tb-key" dx="10">user&#160;&#160;</tspan><tspan class="tb-dim">: </tspan><tspan class="tb-val">Aryan Nagar</tspan></text>
       </g>
       <g clip-path="url(#tb-c3)">
-        <text x="46" y="177"><tspan class="tb-prompt">&gt;</tspan><tspan class="tb-key" dx="10">role&#160;&#160;</tspan><tspan class="tb-dim">: </tspan><tspan class="tb-val">AI System Architect | ML &amp; Agentic AI</tspan></text>
+        <text x="46" y="177"><tspan class="tb-prompt">&gt;</tspan><tspan class="tb-key" dx="10">role&#160;&#160;</tspan><tspan class="tb-dim">: </tspan><tspan class="tb-val">Explainable ML | Agentic AI Systems</tspan></text>
       </g>
       <g clip-path="url(#tb-c4)">
         <text x="46" y="213"><tspan class="tb-prompt">&gt;</tspan><tspan class="tb-key" dx="10">status</tspan><tspan class="tb-dim">: </tspan><tspan class="tb-val">online</tspan></text>
@@ -81,7 +81,7 @@
 
       <rect id="tb-cursor" x="46" y="196" width="11" height="22" fill="#d8c9b4">
         <animate attributeName="x"
-          values="46;46;256;256;46;268;268;46;540;540;46;214;214;214"
+          values="46;46;256;256;46;268;268;46;518;518;46;214;214;214"
           keyTimes="0;0.033;0.167;0.185;0.189;0.344;0.363;0.367;0.589;0.607;0.611;0.722;0.94;1"
           dur="9s" repeatCount="indefinite"/>
         <animate attributeName="y"

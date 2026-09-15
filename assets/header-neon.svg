@@ -78,9 +78,9 @@
     <rect id="nn-ruleline" x="210" y="148" width="440" height="3" rx="1.5" fill="url(#nn-rule)"/>
 
     <text class="nn-body" x="430" y="184" text-anchor="middle" font-size="14" fill="#cbd3dd" letter-spacing="2.5">
-      AI SYSTEMS  &#183;  ML &amp; AGENTIC AI  &#183;  DATA ANALYTICS
+      EXPLAINABLE ML  &#183;  AGENTIC AI  &#183;  DATA SCIENCE
     </text>
-    <rect id="nn-cursor" x="672" y="172" width="8" height="16" fill="#e8e2d4"/>
+    <rect id="nn-cursor" x="660" y="172" width="8" height="16" fill="#e8e2d4"/>
 
     <rect x="0" y="196" width="1000" height="84" fill="url(#nn-foot)"/>
 
