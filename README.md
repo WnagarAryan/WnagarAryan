@@ -311,11 +311,7 @@ flowchart LR
 
 <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" alt=""/>
 
+<!-- ============ QUOTE + FOOTER ============ -->
 <p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/quote-socrates.svg" alt="The only true wisdom is in knowing you know nothing. - Socrates"/>
-</p>
-
-<!-- ============ FOOTER (custom animated SVG) ============ -->
-<p align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/footer-wave.svg" alt=""/>
+  <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/footer-quote.svg" alt="The only true wisdom is in knowing you know nothing. - Socrates"/>
 </p>
