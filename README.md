@@ -189,48 +189,64 @@ const aryan = {
 <h3 align="center">How FraudLens works</h3>
 
 ```mermaid
-flowchart TB
-    A["17,880 job postings"] --> B["NLTK · TF-IDF · SMOTE<br/>clean, vectorise, rebalance"]
-    B --> C["5 algorithms benchmarked"]
-    C --> D["LinearSVC<br/>chosen on Fake-class F1"]
+flowchart LR
+    A["Posting text<br/>or URL"] --> B["trafilatura<br/>extract body"]
+    B --> C["clean_text<br/>NLTK stopwords"]
+    C --> D["TF-IDF<br/>vectorise"]
+    D --> E["hstack<br/>+ logo · questions · profile<br/>+ keyword flag"]
+    E --> F["Classifier<br/>verdict + content risk"]
 
-    D --> E1["SHAP<br/>feature attribution"]
-    D --> E2["Rule-based<br/>keyword detection"]
-    D --> E3["OpenCorporates · Tavily<br/>live company check"]
+    F --> G["SHAP<br/>top 8 features"]
+    F --> H["Keyword scan<br/>4 categories"]
+    F --> I["Registry lookup<br/>+ past reports at 0.7"]
 
-    E1 --> F["LangChain / Groq<br/>plain-English justification"]
-    E2 --> F
-    E3 --> F
+    G --> J["LangChain / Groq<br/>plain-English justification"]
+    H --> J
+    I --> J
 
-    F --> G["Ranked queue<br/>34.2% vs 4.8%<br/>7x fraud-rate lift"]
-    G --> H["FastAPI · HTML/CSS/JS · Render"]
+    J --> K["Confidence<br/>High 70+ · Moderate 50+ · Low"]
 
-    style A  fill:#0e1215,color:#9aa3ad,stroke:#3a4048
-    style B  fill:#0e1215,color:#d9e1e6,stroke:#3a4048
-    style C  fill:#0e1215,color:#d9e1e6,stroke:#3a4048
-    style D  fill:#14293E,color:#e8eefc,stroke:#4d9eff
-    style E1 fill:#0e1215,color:#4d9eff,stroke:#4d9eff
-    style E2 fill:#0e1215,color:#d9e1e6,stroke:#3a4048
-    style E3 fill:#0e1215,color:#d9e1e6,stroke:#3a4048
-    style F  fill:#14293E,color:#e8eefc,stroke:#4d9eff
-    style G  fill:#0e1215,color:#4d9eff,stroke:#4d9eff
-    style H  fill:#0e1215,color:#9aa3ad,stroke:#3a4048
+    style A fill:#0e1215,color:#9aa3ad,stroke:#3a4048
+    style B fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style C fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style D fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style E fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style F fill:#14293E,color:#e8eefc,stroke:#4d9eff
+    style G fill:#0e1215,color:#4d9eff,stroke:#4d9eff
+    style H fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style I fill:#0e1215,color:#d9e1e6,stroke:#3a4048
+    style J fill:#14293E,color:#e8eefc,stroke:#4d9eff
+    style K fill:#0e1215,color:#4d9eff,stroke:#4d9eff
 ```
 
 <h3 align="center">How Kuberis works</h3>
 
 ```mermaid
 flowchart LR
-    A["CSV / Excel<br/>auto-classified"] --> B["Pandas<br/>10+ KPIs computed"]
-    B --> C["Groq Llama 3.3 70B<br/>insights engine"]
-    C --> D["8+ query types<br/>answered in plain English"]
-    D --> E["FastAPI<br/>custom JS frontend"]
+    A["CSV / XLSX"] --> B["load · validate · classify<br/>Sales · Financial · BI"]
+    B --> C["calculate_business_metrics<br/>7 KPIs, where a column matches"]
+    C --> S{"generate_initial_insights"}
 
-    style A fill:#e4ddcf,color:#14293e,stroke:#a9832f
-    style B fill:#e4ddcf,color:#14293e,stroke:#a9832f
-    style C fill:#14293e,color:#e4ddcf,stroke:#a9832f
-    style D fill:#e4ddcf,color:#14293e,stroke:#a9832f
-    style E fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    S -->|"model answers"| SA["DatasetSummary<br/>via Groq"]
+    S -->|"3 attempts fail"| SB["summarize_without_llm<br/>Pandas-only summary"]
+
+    SA --> D["Dashboard<br/>metrics · preview · statistics"]
+    SB --> D
+
+    D --> Q["Question in<br/>plain English"]
+    Q --> X["detect_intent · execute_analysis<br/>9 routed types, computed in Pandas"]
+    X --> E["explain_result<br/>answer · explanation · recommendation"]
+
+    style A  fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style B  fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style C  fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style S  fill:#14293e,color:#e4ddcf,stroke:#a9832f
+    style SA fill:#14293e,color:#e4ddcf,stroke:#a9832f
+    style SB fill:#e4ddcf,color:#14293e,stroke:#8c8474
+    style D  fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style Q  fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style X  fill:#e4ddcf,color:#14293e,stroke:#a9832f
+    style E  fill:#14293e,color:#e4ddcf,stroke:#a9832f
 ```
 
 <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" alt=""/>
