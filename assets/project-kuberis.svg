@@ -1,6 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="520" height="230" viewBox="0 0 520 230" role="img" aria-label="Kuberis">
   <title>Kuberis</title>
   <defs>
+    <linearGradient id="kb-ir" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="520" y2="0">
+      <stop offset="0%" stop-color="#0e7490">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0e7490;#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490"/>
+      </stop>
+      <stop offset="33%" stop-color="#00c9d7">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7"/>
+      </stop>
+      <stop offset="66%" stop-color="#7fe3ec">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec"/>
+      </stop>
+      <stop offset="100%" stop-color="#f4f7fb">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec;#f4f7fb"/>
+      </stop>
+    </linearGradient>
     <clipPath id="kb-clip"><rect width="520" height="230" rx="16"/></clipPath>
     <style>
       @font-face {
@@ -21,9 +35,9 @@
   </defs>
 
   <g clip-path="url(#kb-clip)">
-    <rect width="520" height="230" fill="#e4ddcf"/>
+    <rect width="520" height="230" fill="#08090b"/>
 
-    <g stroke="#d6cdb9" stroke-width="1">
+    <g stroke="#14202b" stroke-width="1">
       <line x1="0" y1="26" x2="520" y2="26"/>
       <line x1="0" y1="52" x2="520" y2="52"/>
       <line x1="0" y1="78" x2="520" y2="78"/>
@@ -34,22 +48,22 @@
       <line x1="0" y1="208" x2="520" y2="208"/>
     </g>
 
-    <g class="kb-mono" font-size="9.5" fill="#a9832f">
+    <g class="kb-mono" font-size="9.5" fill="#7fe3ec">
       <text x="20" y="26">01 &#8212; NEW ENTRY</text>
       <text x="500" y="26" text-anchor="end">READS CSV / EXCEL</text>
       <text x="20" y="210">PANDAS &#183; LANGCHAIN &#183; GROQ</text>
     </g>
-    <text class="kb-mono" x="500" y="210" text-anchor="end" font-size="9.5" fill="#8c8474">v1.0</text>
+    <text class="kb-mono" x="500" y="210" text-anchor="end" font-size="9.5" fill="#dde5f0">v1.0</text>
 
     <text class="kb-serif" x="260" y="128" text-anchor="middle" font-size="42" font-weight="700"
-          fill="#14293e">&#167; Kuberis</text>
+          fill="url(#kb-ir)">&#167; Kuberis</text>
 
-    <line id="kb-rule" x1="135" y1="144" x2="385" y2="144" stroke="#14293e" stroke-width="1.5" stroke-opacity="0.55"/>
+    <line id="kb-rule" x1="135" y1="144" x2="385" y2="144" stroke="url(#kb-ir)" stroke-width="1.5" stroke-opacity="0.85"/>
 
-    <text class="kb-mono" x="260" y="170" text-anchor="middle" font-size="9" fill="#a9832f">
+    <text class="kb-mono" x="260" y="170" text-anchor="middle" font-size="9" fill="#7fe3ec">
       AI BUSINESS INTELLIGENCE &#183; READ THE NUMBERS, ASK THE QUESTIONS
     </text>
-    <rect id="kb-cur" x="474" y="120" width="3" height="14" fill="#a9832f"/>
+    <rect id="kb-cur" x="474" y="120" width="3" height="14" fill="#7fe3ec"/>
   </g>
-  <rect x="0.75" y="0.75" width="518.5" height="228.5" rx="15.25" fill="none" stroke="#c9bfa8" stroke-width="1.5"/>
+  <rect x="0.75" y="0.75" width="518.5" height="228.5" rx="15.25" fill="none" stroke="url(#kb-ir)" stroke-width="1.5" stroke-opacity="0.6"/>
 </svg>
