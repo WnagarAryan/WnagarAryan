@@ -2,17 +2,17 @@
   <title>INSTAGRAM</title>
   <defs>
     <linearGradient id="bt-ir" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="138" y2="0">
-      <stop offset="0%" stop-color="#0e7490">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0e7490;#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490"/>
+      <stop offset="0%" stop-color="#0A4591">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0A4591;#006EB4;#4FA3C7;#85C7C6;#C7B29D;#6C4933;#0A4591"/>
       </stop>
-      <stop offset="33%" stop-color="#00c9d7">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7"/>
+      <stop offset="33%" stop-color="#006EB4">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#006EB4;#4FA3C7;#85C7C6;#C7B29D;#6C4933;#0A4591;#006EB4"/>
       </stop>
-      <stop offset="66%" stop-color="#7fe3ec">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec"/>
+      <stop offset="66%" stop-color="#4FA3C7">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#4FA3C7;#85C7C6;#C7B29D;#6C4933;#0A4591;#006EB4;#4FA3C7"/>
       </stop>
-      <stop offset="100%" stop-color="#f4f7fb">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec;#f4f7fb"/>
+      <stop offset="100%" stop-color="#85C7C6">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#85C7C6;#C7B29D;#6C4933;#0A4591;#006EB4;#4FA3C7;#85C7C6"/>
       </stop>
     </linearGradient>
 

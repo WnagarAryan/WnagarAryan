@@ -2,17 +2,17 @@
   <title>Kuberis</title>
   <defs>
     <linearGradient id="kb-ir" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="520" y2="0">
-      <stop offset="0%" stop-color="#0e7490">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0e7490;#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490"/>
+      <stop offset="0%" stop-color="#0A4591">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0A4591;#006EB4;#4FA3C7;#85C7C6;#4FA3C7;#006EB4;#0A4591"/>
       </stop>
-      <stop offset="33%" stop-color="#00c9d7">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7"/>
+      <stop offset="33%" stop-color="#006EB4">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#006EB4;#4FA3C7;#85C7C6;#4FA3C7;#006EB4;#0A4591;#006EB4"/>
       </stop>
-      <stop offset="66%" stop-color="#7fe3ec">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec"/>
+      <stop offset="66%" stop-color="#4FA3C7">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#4FA3C7;#85C7C6;#4FA3C7;#006EB4;#0A4591;#006EB4;#4FA3C7"/>
       </stop>
-      <stop offset="100%" stop-color="#f4f7fb">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec;#f4f7fb"/>
+      <stop offset="100%" stop-color="#85C7C6">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#85C7C6;#4FA3C7;#006EB4;#0A4591;#006EB4;#4FA3C7;#85C7C6"/>
       </stop>
     </linearGradient>
     <clipPath id="kb-clip"><rect width="520" height="230" rx="16"/></clipPath>
@@ -35,7 +35,7 @@
   </defs>
 
   <g clip-path="url(#kb-clip)">
-    <rect width="520" height="230" fill="#08090b"/>
+    <rect width="520" height="230" fill="#000000"/>
 
     <g stroke="#14202b" stroke-width="1">
       <line x1="0" y1="26" x2="520" y2="26"/>
@@ -48,22 +48,22 @@
       <line x1="0" y1="208" x2="520" y2="208"/>
     </g>
 
-    <g class="kb-mono" font-size="9.5" fill="#7fe3ec">
+    <g class="kb-mono" font-size="9.5" fill="#4FA3C7">
       <text x="20" y="26">01 &#8212; NEW ENTRY</text>
       <text x="500" y="26" text-anchor="end">READS CSV / EXCEL</text>
       <text x="20" y="210">PANDAS &#183; LANGCHAIN &#183; GROQ</text>
     </g>
-    <text class="kb-mono" x="500" y="210" text-anchor="end" font-size="9.5" fill="#dde5f0">v1.0</text>
+    <text class="kb-mono" x="500" y="210" text-anchor="end" font-size="9.5" fill="#6F7E8C">v1.0</text>
 
     <text class="kb-serif" x="260" y="128" text-anchor="middle" font-size="42" font-weight="700"
           fill="url(#kb-ir)">&#167; Kuberis</text>
 
     <line id="kb-rule" x1="135" y1="144" x2="385" y2="144" stroke="url(#kb-ir)" stroke-width="1.5" stroke-opacity="0.85"/>
 
-    <text class="kb-mono" x="260" y="170" text-anchor="middle" font-size="9" fill="#7fe3ec">
+    <text class="kb-mono" x="260" y="170" text-anchor="middle" font-size="9" fill="#4FA3C7">
       AI BUSINESS INTELLIGENCE &#183; READ THE NUMBERS, ASK THE QUESTIONS
     </text>
-    <rect id="kb-cur" x="474" y="120" width="3" height="14" fill="#7fe3ec"/>
+    <rect id="kb-cur" x="474" y="120" width="3" height="14" fill="#4FA3C7"/>
   </g>
   <rect x="0.75" y="0.75" width="518.5" height="228.5" rx="15.25" fill="none" stroke="url(#kb-ir)" stroke-width="1.5" stroke-opacity="0.6"/>
 </svg>
