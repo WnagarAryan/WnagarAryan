@@ -84,3 +84,6 @@ handles 8 or more categories of natural-language query.
 Pandas calculates every figure. The model only describes the result, so a
 business number is never something the model invented. FastAPI, custom JS
 frontend, deployed on Render.
+
+<a href="https://kuberis-ai-business-intelligence-agent.onrender.com"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-demo.svg" alt="Live demo"></a>
+<a href="https://github.com/WnagarAryan/Kuberis-AI-Business-Intelligence-Agent"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-code.svg" alt="Code"></a>
