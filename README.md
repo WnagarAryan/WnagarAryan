@@ -254,7 +254,7 @@ flowchart LR
 
 <p align="center">
   <img width="49%" src="https://github-readme-stats-two-beta-28.vercel.app/api?username=WnagarAryan&show_icons=true&theme=tokyonight&bg_color=000000&hide_border=true&rank_icon=github&include_all_commits=true&count_private=true"/>
-  <img width="49%" src="https://streak-stats.demolab.com?user=WnagarAryan&theme=tokyonight&background=000000&hide_border=true"/>
+  <img width="49%" src="https://streak-stats.demolab.com/?user=WnagarAryan&theme=tokyonight&background=000000&hide_border=true"/>
 </p>
 
 <p align="center">
