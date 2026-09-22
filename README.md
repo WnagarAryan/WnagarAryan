@@ -98,3 +98,9 @@ Built and deployed ten autonomous AI agents in Python with LangChain and LLM
 APIs: research, task automation, an email assistant, multi-agent collaboration
 and a capstone system. 15 or more prompt templates, with multi-step reasoning,
 planning, memory and context handling.
+
+## Education
+
+B.Tech Computer Science, Global Institute of Technology, Jaipur. 2023 to 2027.
+
+Machine Learning and Deep Learning specializations, Stanford Online. 2026.
