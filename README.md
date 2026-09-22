@@ -69,3 +69,5 @@ flowchart LR
 
 <a href="https://fraudlens-project-showcase.onrender.com"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-demo.svg" alt="Live demo"></a>
 <a href="https://github.com/WnagarAryan/FraudLens-Project-Showcase"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-code.svg" alt="Code"></a>
+
+<img src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" width="100%" alt="">
