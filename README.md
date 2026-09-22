@@ -71,3 +71,16 @@ flowchart LR
 <a href="https://github.com/WnagarAryan/FraudLens-Project-Showcase"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-code.svg" alt="Code"></a>
 
 <img src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" width="100%" alt="">
+
+## Kuberis
+
+AI business-intelligence agent. 2026.
+
+Upload a spreadsheet, get KPIs, then ask questions in English. A Pandas pipeline
+classifies any CSV or Excel file and computes 10 or more KPIs without being told
+the schema. The insights engine runs on LangChain and Groq's Llama 3.3 70B and
+handles 8 or more categories of natural-language query.
+
+Pandas calculates every figure. The model only describes the result, so a
+business number is never something the model invented. FastAPI, custom JS
+frontend, deployed on Render.
