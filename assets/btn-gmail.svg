@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="46" viewBox="0 0 100 46" role="img" aria-label="EMAIL">
+  <title>EMAIL</title>
+  <defs>
+    <linearGradient id="bt-ir" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="0">
+      <stop offset="0%" stop-color="#0e7490">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0e7490;#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490"/>
+      </stop>
+      <stop offset="33%" stop-color="#00c9d7">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7"/>
+      </stop>
+      <stop offset="66%" stop-color="#7fe3ec">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec"/>
+      </stop>
+      <stop offset="100%" stop-color="#f4f7fb">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec;#f4f7fb"/>
+      </stop>
+    </linearGradient>
+
+    <filter id="bt-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1.5" y="1.5" width="97" height="43" rx="21"
+        fill="#000000" stroke="url(#bt-ir)" stroke-width="2"/>
+
+  <rect x="1.5" y="1.5" width="97" height="43" rx="21"
+        fill="url(#bt-ir)" fill-opacity="0.10"/>
+
+  <text x="50" y="28" text-anchor="middle" filter="url(#bt-glow)"
+        font-family="'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif"
+        font-size="15" font-weight="700" letter-spacing="2"
+        fill="url(#bt-ir)">EMAIL</text>
+</svg>
