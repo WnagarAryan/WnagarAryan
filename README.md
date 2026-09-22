@@ -47,3 +47,22 @@ is shown.
 
 Result: a 34.2% fraud rate in flagged listings against a 4.8% base rate. A 7x
 lift.
+
+```mermaid
+flowchart LR
+    A["17,880 postings"] --> B["TF-IDF + SMOTE<br/>5 algorithms benchmarked"]
+    B --> C["LinearSVC<br/>selected on Fake-class F1"]
+    C --> D["SHAP attribution"]
+    C --> E["OpenCorporates + Tavily<br/>company verification"]
+    D --> F["LangChain + Groq<br/>plain-English reason"]
+    E --> F
+    F --> G["34.2% vs 4.8%<br/>7x lift"]
+
+    style A fill:#101114,color:#dde5f0,stroke:#22232a
+    style B fill:#101114,color:#f4f7fb,stroke:#22232a
+    style C fill:#0e7490,color:#f4f7fb,stroke:#00c9d7
+    style D fill:#101114,color:#00c9d7,stroke:#00c9d7
+    style E fill:#101114,color:#f4f7fb,stroke:#22232a
+    style F fill:#0e7490,color:#f4f7fb,stroke:#00c9d7
+    style G fill:#101114,color:#00c9d7,stroke:#00c9d7
+```
