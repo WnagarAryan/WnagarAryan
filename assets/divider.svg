@@ -3,14 +3,19 @@
   <defs>
     <!-- every digit shares this one gradient, so the bright band travelling
          through it sweeps the whole row rather than each glyph separately -->
-    <linearGradient id="dv-sweep" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="0">
-      <stop offset="0%"   stop-color="#1f9d4a"/>
-      <stop offset="38%"  stop-color="#3ae87a"/>
-      <stop offset="50%"  stop-color="#d9ffe8"/>
-      <stop offset="62%"  stop-color="#3ae87a"/>
-      <stop offset="100%" stop-color="#1f9d4a"/>
-      <animateTransform attributeName="gradientTransform" type="translate"
-        from="-340 0" to="1040 0" dur="6s" repeatCount="indefinite"/>
+    <linearGradient id="dv-sweep" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+      <stop offset="0%" stop-color="#0e7490">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0e7490;#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490"/>
+      </stop>
+      <stop offset="33%" stop-color="#00c9d7">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7"/>
+      </stop>
+      <stop offset="66%" stop-color="#7fe3ec">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec"/>
+      </stop>
+      <stop offset="100%" stop-color="#f4f7fb">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec;#f4f7fb"/>
+      </stop>
     </linearGradient>
 
     <linearGradient id="dv-fade" x1="0" y1="0" x2="1" y2="0">
@@ -22,7 +27,7 @@
     <mask id="dv-mask"><rect width="1000" height="34" fill="url(#dv-fade)"/></mask>
 
     <filter id="dv-glow" x="-120%" y="-120%" width="340%" height="340%">
-      <feGaussianBlur stdDeviation="2.1" result="b"/>
+      <feGaussianBlur stdDeviation="2.3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
