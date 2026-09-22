@@ -2,38 +2,43 @@
   <title>nameplate</title>
   <defs>
     <linearGradient id="nn-fade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#05060a" stop-opacity="1"/>
-      <stop offset="40%"  stop-color="#05060a" stop-opacity="0.94"/>
-      <stop offset="72%"  stop-color="#05060a" stop-opacity="0.42"/>
-      <stop offset="100%" stop-color="#05060a" stop-opacity="0.10"/>
+      <stop offset="0%"   stop-color="#000000" stop-opacity="1"/>
+      <stop offset="40%"  stop-color="#000000" stop-opacity="0.94"/>
+      <stop offset="72%"  stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.10"/>
     </linearGradient>
 
     <linearGradient id="nn-name" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="420" y2="0">
-      <stop offset="0%"   stop-color="#6f7d90"/>
-      <stop offset="32%"  stop-color="#ffffff"/>
-      <stop offset="52%"  stop-color="#ffffff"/>
-      <stop offset="72%"  stop-color="#d8c9b4"/>
-      <stop offset="100%" stop-color="#8a7f70"/>
-      <animateTransform attributeName="gradientTransform" type="translate"
-        from="-460 0" to="1000 0" dur="5.5s" repeatCount="indefinite"/>
+      <stop offset="0%" stop-color="#0e7490">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0e7490;#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490"/>
+      </stop>
+      <stop offset="33%" stop-color="#00c9d7">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7"/>
+      </stop>
+      <stop offset="66%" stop-color="#7fe3ec">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec"/>
+      </stop>
+      <stop offset="100%" stop-color="#f4f7fb">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec;#f4f7fb"/>
+      </stop>
     </linearGradient>
 
     <linearGradient id="nn-rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#e8e2d4" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#e8e2d4" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#e8e2d4" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#f4f7fb" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#f4f7fb" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f4f7fb" stop-opacity="0"/>
     </linearGradient>
 
     <linearGradient id="nn-foot" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#05060a" stop-opacity="0"/>
-      <stop offset="55%"  stop-color="#05060a" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#05060a" stop-opacity="0.85"/>
+      <stop offset="0%"   stop-color="#000000" stop-opacity="0"/>
+      <stop offset="55%"  stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.85"/>
     </linearGradient>
 
     <radialGradient id="nn-scrim" cx="42%" cy="50%" r="52%">
-      <stop offset="0%"   stop-color="#05060a" stop-opacity="0.80"/>
-      <stop offset="65%"  stop-color="#05060a" stop-opacity="0.42"/>
-      <stop offset="100%" stop-color="#05060a" stop-opacity="0"/>
+      <stop offset="0%"   stop-color="#000000" stop-opacity="0.80"/>
+      <stop offset="65%"  stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
 
     <filter id="nn-glow" x="-40%" y="-40%" width="180%" height="180%">
