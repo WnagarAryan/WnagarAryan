@@ -87,3 +87,5 @@ frontend, deployed on Render.
 
 <a href="https://kuberis-ai-business-intelligence-agent.onrender.com"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-demo.svg" alt="Live demo"></a>
 <a href="https://github.com/WnagarAryan/Kuberis-AI-Business-Intelligence-Agent"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-code.svg" alt="Code"></a>
+
+<img src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" width="100%" alt="">
