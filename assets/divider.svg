@@ -1,234 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="34" viewBox="0 0 1000 34" role="img" aria-label="divider">
-  <title>binary divider</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="46" viewBox="0 0 1000 46" role="img" aria-label="divider">
+  <title>python</title>
+  <desc>A python crossing the page from left to right.</desc>
   <defs>
-    <!-- every digit shares this one gradient, so the bright band travelling
-         through it sweeps the whole row rather than each glyph separately -->
-    <linearGradient id="dv-sweep" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
-      <stop offset="0%" stop-color="#0A4591">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0A4591;#006EB4;#4FA3C7;#85C7C6;#C7B29D;#6C4933;#0A4591"/>
-      </stop>
-      <stop offset="33%" stop-color="#006EB4">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#006EB4;#4FA3C7;#85C7C6;#C7B29D;#6C4933;#0A4591;#006EB4"/>
-      </stop>
-      <stop offset="66%" stop-color="#4FA3C7">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#4FA3C7;#85C7C6;#C7B29D;#6C4933;#0A4591;#006EB4;#4FA3C7"/>
-      </stop>
-      <stop offset="100%" stop-color="#85C7C6">
-        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#85C7C6;#C7B29D;#6C4933;#0A4591;#006EB4;#4FA3C7;#85C7C6"/>
-      </stop>
+    <linearGradient id="sn-skin" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0">
+      <stop offset="0%" stop-color="#3776AB"/>
+      <stop offset="38%" stop-color="#4B8BBE"/>
+      <stop offset="68%" stop-color="#8FAF6E"/>
+      <stop offset="100%" stop-color="#FFD43B"/>
     </linearGradient>
 
-    <linearGradient id="dv-fade" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#fff" stop-opacity="0"/>
-      <stop offset="12%"  stop-color="#fff" stop-opacity="1"/>
-      <stop offset="88%"  stop-color="#fff" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    <linearGradient id="sn-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3776AB" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4B8BBE" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FFD43B" stop-opacity="0"/>
     </linearGradient>
-    <mask id="dv-mask"><rect width="1000" height="34" fill="url(#dv-fade)"/></mask>
 
-    <filter id="dv-glow" x="-120%" y="-120%" width="340%" height="340%">
-      <feGaussianBlur stdDeviation="2.3" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-
-    <style>
-      .dv-d {
-        font-family:'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;
-        font-size:16px; font-weight:700; text-anchor:middle;
-        fill:url(#dv-sweep);
-      }
-      /* steps(1) so a digit snaps between states instead of dissolving */
-      @keyframes dv-on  { 0%,49.9%{ opacity:1 } 50%,100%{ opacity:0 } }
-      @keyframes dv-off { 0%,49.9%{ opacity:0 } 50%,100%{ opacity:1 } }
-      #dv-a0 { animation: dv-on  2.30s steps(1,end) infinite -0.00s; }
-      #dv-b0 { animation: dv-off 2.30s steps(1,end) infinite -0.00s; }
-      #dv-a1 { animation: dv-on  3.07s steps(1,end) infinite -2.21s; }
-      #dv-b1 { animation: dv-off 3.07s steps(1,end) infinite -2.21s; }
-      #dv-a2 { animation: dv-on  3.84s steps(1,end) infinite -4.42s; }
-      #dv-b2 { animation: dv-off 3.84s steps(1,end) infinite -4.42s; }
-      #dv-a3 { animation: dv-on  4.61s steps(1,end) infinite -1.70s; }
-      #dv-b3 { animation: dv-off 4.61s steps(1,end) infinite -1.70s; }
-      #dv-a4 { animation: dv-on  2.85s steps(1,end) infinite -3.91s; }
-      #dv-b4 { animation: dv-off 2.85s steps(1,end) infinite -3.91s; }
-      #dv-a5 { animation: dv-on  3.62s steps(1,end) infinite -1.19s; }
-      #dv-b5 { animation: dv-off 3.62s steps(1,end) infinite -1.19s; }
-      #dv-a6 { animation: dv-on  4.39s steps(1,end) infinite -3.40s; }
-      #dv-b6 { animation: dv-off 4.39s steps(1,end) infinite -3.40s; }
-      #dv-a7 { animation: dv-on  2.63s steps(1,end) infinite -0.68s; }
-      #dv-b7 { animation: dv-off 2.63s steps(1,end) infinite -0.68s; }
-      #dv-a8 { animation: dv-on  3.40s steps(1,end) infinite -2.89s; }
-      #dv-b8 { animation: dv-off 3.40s steps(1,end) infinite -2.89s; }
-      #dv-a9 { animation: dv-on  4.17s steps(1,end) infinite -0.17s; }
-      #dv-b9 { animation: dv-off 4.17s steps(1,end) infinite -0.17s; }
-      #dv-a10 { animation: dv-on  2.41s steps(1,end) infinite -2.38s; }
-      #dv-b10 { animation: dv-off 2.41s steps(1,end) infinite -2.38s; }
-      #dv-a11 { animation: dv-on  3.18s steps(1,end) infinite -4.59s; }
-      #dv-b11 { animation: dv-off 3.18s steps(1,end) infinite -4.59s; }
-      #dv-a12 { animation: dv-on  3.95s steps(1,end) infinite -1.87s; }
-      #dv-b12 { animation: dv-off 3.95s steps(1,end) infinite -1.87s; }
-      #dv-a13 { animation: dv-on  4.72s steps(1,end) infinite -4.08s; }
-      #dv-b13 { animation: dv-off 4.72s steps(1,end) infinite -4.08s; }
-      #dv-a14 { animation: dv-on  2.96s steps(1,end) infinite -1.36s; }
-      #dv-b14 { animation: dv-off 2.96s steps(1,end) infinite -1.36s; }
-      #dv-a15 { animation: dv-on  3.73s steps(1,end) infinite -3.57s; }
-      #dv-b15 { animation: dv-off 3.73s steps(1,end) infinite -3.57s; }
-      #dv-a16 { animation: dv-on  4.50s steps(1,end) infinite -0.85s; }
-      #dv-b16 { animation: dv-off 4.50s steps(1,end) infinite -0.85s; }
-      #dv-a17 { animation: dv-on  2.74s steps(1,end) infinite -3.06s; }
-      #dv-b17 { animation: dv-off 2.74s steps(1,end) infinite -3.06s; }
-      #dv-a18 { animation: dv-on  3.51s steps(1,end) infinite -0.34s; }
-      #dv-b18 { animation: dv-off 3.51s steps(1,end) infinite -0.34s; }
-      #dv-a19 { animation: dv-on  4.28s steps(1,end) infinite -2.55s; }
-      #dv-b19 { animation: dv-off 4.28s steps(1,end) infinite -2.55s; }
-      #dv-a20 { animation: dv-on  2.52s steps(1,end) infinite -4.76s; }
-      #dv-b20 { animation: dv-off 2.52s steps(1,end) infinite -4.76s; }
-      #dv-a21 { animation: dv-on  3.29s steps(1,end) infinite -2.04s; }
-      #dv-b21 { animation: dv-off 3.29s steps(1,end) infinite -2.04s; }
-      #dv-a22 { animation: dv-on  4.06s steps(1,end) infinite -4.25s; }
-      #dv-b22 { animation: dv-off 4.06s steps(1,end) infinite -4.25s; }
-      #dv-a23 { animation: dv-on  2.30s steps(1,end) infinite -1.53s; }
-      #dv-b23 { animation: dv-off 2.30s steps(1,end) infinite -1.53s; }
-      #dv-a24 { animation: dv-on  3.07s steps(1,end) infinite -3.74s; }
-      #dv-b24 { animation: dv-off 3.07s steps(1,end) infinite -3.74s; }
-      #dv-a25 { animation: dv-on  3.84s steps(1,end) infinite -1.02s; }
-      #dv-b25 { animation: dv-off 3.84s steps(1,end) infinite -1.02s; }
-      #dv-a26 { animation: dv-on  4.61s steps(1,end) infinite -3.23s; }
-      #dv-b26 { animation: dv-off 4.61s steps(1,end) infinite -3.23s; }
-      #dv-a27 { animation: dv-on  2.85s steps(1,end) infinite -0.51s; }
-      #dv-b27 { animation: dv-off 2.85s steps(1,end) infinite -0.51s; }
-      #dv-a28 { animation: dv-on  3.62s steps(1,end) infinite -2.72s; }
-      #dv-b28 { animation: dv-off 3.62s steps(1,end) infinite -2.72s; }
-      #dv-a29 { animation: dv-on  4.39s steps(1,end) infinite -0.00s; }
-      #dv-b29 { animation: dv-off 4.39s steps(1,end) infinite -0.00s; }
-      #dv-a30 { animation: dv-on  2.63s steps(1,end) infinite -2.21s; }
-      #dv-b30 { animation: dv-off 2.63s steps(1,end) infinite -2.21s; }
-      #dv-a31 { animation: dv-on  3.40s steps(1,end) infinite -4.42s; }
-      #dv-b31 { animation: dv-off 3.40s steps(1,end) infinite -4.42s; }
-      #dv-a32 { animation: dv-on  4.17s steps(1,end) infinite -1.70s; }
-      #dv-b32 { animation: dv-off 4.17s steps(1,end) infinite -1.70s; }
-      #dv-a33 { animation: dv-on  2.41s steps(1,end) infinite -3.91s; }
-      #dv-b33 { animation: dv-off 2.41s steps(1,end) infinite -3.91s; }
-      #dv-a34 { animation: dv-on  3.18s steps(1,end) infinite -1.19s; }
-      #dv-b34 { animation: dv-off 3.18s steps(1,end) infinite -1.19s; }
-      #dv-a35 { animation: dv-on  3.95s steps(1,end) infinite -3.40s; }
-      #dv-b35 { animation: dv-off 3.95s steps(1,end) infinite -3.40s; }
-      #dv-a36 { animation: dv-on  4.72s steps(1,end) infinite -0.68s; }
-      #dv-b36 { animation: dv-off 4.72s steps(1,end) infinite -0.68s; }
-      #dv-a37 { animation: dv-on  2.96s steps(1,end) infinite -2.89s; }
-      #dv-b37 { animation: dv-off 2.96s steps(1,end) infinite -2.89s; }
-      #dv-a38 { animation: dv-on  3.73s steps(1,end) infinite -0.17s; }
-      #dv-b38 { animation: dv-off 3.73s steps(1,end) infinite -0.17s; }
-      #dv-a39 { animation: dv-on  4.50s steps(1,end) infinite -2.38s; }
-      #dv-b39 { animation: dv-off 4.50s steps(1,end) infinite -2.38s; }
-      #dv-a40 { animation: dv-on  2.74s steps(1,end) infinite -4.59s; }
-      #dv-b40 { animation: dv-off 2.74s steps(1,end) infinite -4.59s; }
-      #dv-a41 { animation: dv-on  3.51s steps(1,end) infinite -1.87s; }
-      #dv-b41 { animation: dv-off 3.51s steps(1,end) infinite -1.87s; }
-      #dv-a42 { animation: dv-on  4.28s steps(1,end) infinite -4.08s; }
-      #dv-b42 { animation: dv-off 4.28s steps(1,end) infinite -4.08s; }
-      #dv-a43 { animation: dv-on  2.52s steps(1,end) infinite -1.36s; }
-      #dv-b43 { animation: dv-off 2.52s steps(1,end) infinite -1.36s; }
-      #dv-a44 { animation: dv-on  3.29s steps(1,end) infinite -3.57s; }
-      #dv-b44 { animation: dv-off 3.29s steps(1,end) infinite -3.57s; }
-      #dv-a45 { animation: dv-on  4.06s steps(1,end) infinite -0.85s; }
-      #dv-b45 { animation: dv-off 4.06s steps(1,end) infinite -0.85s; }
-      #dv-a46 { animation: dv-on  2.30s steps(1,end) infinite -3.06s; }
-      #dv-b46 { animation: dv-off 2.30s steps(1,end) infinite -3.06s; }
-      #dv-a47 { animation: dv-on  3.07s steps(1,end) infinite -0.34s; }
-      #dv-b47 { animation: dv-off 3.07s steps(1,end) infinite -0.34s; }
-      #dv-a48 { animation: dv-on  3.84s steps(1,end) infinite -2.55s; }
-      #dv-b48 { animation: dv-off 3.84s steps(1,end) infinite -2.55s; }
-      #dv-a49 { animation: dv-on  4.61s steps(1,end) infinite -4.76s; }
-      #dv-b49 { animation: dv-off 4.61s steps(1,end) infinite -4.76s; }
-      #dv-a50 { animation: dv-on  2.85s steps(1,end) infinite -2.04s; }
-      #dv-b50 { animation: dv-off 2.85s steps(1,end) infinite -2.04s; }
-      #dv-a51 { animation: dv-on  3.62s steps(1,end) infinite -4.25s; }
-      #dv-b51 { animation: dv-off 3.62s steps(1,end) infinite -4.25s; }
-      #dv-a52 { animation: dv-on  4.39s steps(1,end) infinite -1.53s; }
-      #dv-b52 { animation: dv-off 4.39s steps(1,end) infinite -1.53s; }
-      #dv-a53 { animation: dv-on  2.63s steps(1,end) infinite -3.74s; }
-      #dv-b53 { animation: dv-off 2.63s steps(1,end) infinite -3.74s; }
-      #dv-a54 { animation: dv-on  3.40s steps(1,end) infinite -1.02s; }
-      #dv-b54 { animation: dv-off 3.40s steps(1,end) infinite -1.02s; }
-      #dv-a55 { animation: dv-on  4.17s steps(1,end) infinite -3.23s; }
-      #dv-b55 { animation: dv-off 4.17s steps(1,end) infinite -3.23s; }
-      #dv-a56 { animation: dv-on  2.41s steps(1,end) infinite -0.51s; }
-      #dv-b56 { animation: dv-off 2.41s steps(1,end) infinite -0.51s; }
-      #dv-a57 { animation: dv-on  3.18s steps(1,end) infinite -2.72s; }
-      #dv-b57 { animation: dv-off 3.18s steps(1,end) infinite -2.72s; }
-      #dv-a58 { animation: dv-on  3.95s steps(1,end) infinite -0.00s; }
-      #dv-b58 { animation: dv-off 3.95s steps(1,end) infinite -0.00s; }
-      #dv-a59 { animation: dv-on  4.72s steps(1,end) infinite -2.21s; }
-      #dv-b59 { animation: dv-off 4.72s steps(1,end) infinite -2.21s; }
-      #dv-a60 { animation: dv-on  2.96s steps(1,end) infinite -4.42s; }
-      #dv-b60 { animation: dv-off 2.96s steps(1,end) infinite -4.42s; }
-      #dv-a61 { animation: dv-on  3.73s steps(1,end) infinite -1.70s; }
-      #dv-b61 { animation: dv-off 3.73s steps(1,end) infinite -1.70s; }
-    </style>
+    <path id="sn-path" d="M0.0 23.0 L4.0 24.5 L8.0 26.0 L12.0 27.4 L16.0 28.8 L20.0 30.0 L24.0 31.1 L28.0 32.1 L32.0 32.8 L36.0 33.4 L40.0 33.8 L44.0 34.0 L48.0 34.0 L52.0 33.7 L56.0 33.3 L60.0 32.6 L64.0 31.8 L68.0 30.8 L72.0 29.7 L76.0 28.4 L80.0 27.0 L84.0 25.6 L88.0 24.1 L92.0 22.6 L96.0 21.1 L100.0 19.6 L104.0 18.2 L108.0 16.9 L112.0 15.7 L116.0 14.6 L120.0 13.7 L124.0 13.0 L128.0 12.5 L132.0 12.1 L136.0 12.0 L140.0 12.1 L144.0 12.4 L148.0 12.9 L152.0 13.6 L156.0 14.4 L160.0 15.5 L164.0 16.6 L168.0 17.9 L172.0 19.3 L176.0 20.8 L180.0 22.3 L184.0 23.8 L188.0 25.3 L192.0 26.8 L196.0 28.2 L200.0 29.5 L204.0 30.6 L208.0 31.6 L212.0 32.5 L216.0 33.2 L220.0 33.7 L224.0 33.9 L228.0 34.0 L232.0 33.9 L236.0 33.5 L240.0 33.0 L244.0 32.2 L248.0 31.3 L252.0 30.2 L256.0 29.0 L260.0 27.7 L264.0 26.3 L268.0 24.8 L272.0 23.3 L276.0 21.8 L280.0 20.3 L284.0 18.8 L288.0 17.5 L292.0 16.2 L296.0 15.1 L300.0 14.1 L304.0 13.3 L308.0 12.7 L312.0 12.3 L316.0 12.0 L320.0 12.0 L324.0 12.2 L328.0 12.6 L332.0 13.2 L336.0 14.0 L340.0 15.0 L344.0 16.1 L348.0 17.3 L352.0 18.7 L356.0 20.1 L360.0 21.6 L364.0 23.1 L368.0 24.7 L372.0 26.1 L376.0 27.6 L380.0 28.9 L384.0 30.1 L388.0 31.2 L392.0 32.1 L396.0 32.9 L400.0 33.5 L404.0 33.8 L408.0 34.0 L412.0 33.9 L416.0 33.7 L420.0 33.2 L424.0 32.6 L428.0 31.7 L432.0 30.7 L436.0 29.6 L440.0 28.3 L444.0 26.9 L448.0 25.5 L452.0 24.0 L456.0 22.4 L460.0 20.9 L464.0 19.5 L468.0 18.1 L472.0 16.8 L476.0 15.6 L480.0 14.5 L484.0 13.6 L488.0 12.9 L492.0 12.4 L496.0 12.1 L500.0 12.0 L504.0 12.1 L508.0 12.4 L512.0 12.9 L516.0 13.6 L520.0 14.5 L524.0 15.6 L528.0 16.8 L532.0 18.1 L536.0 19.5 L540.0 20.9 L544.0 22.4 L548.0 24.0 L552.0 25.5 L556.0 26.9 L560.0 28.3 L564.0 29.6 L568.0 30.7 L572.0 31.7 L576.0 32.6 L580.0 33.2 L584.0 33.7 L588.0 33.9 L592.0 34.0 L596.0 33.8 L600.0 33.5 L604.0 32.9 L608.0 32.1 L612.0 31.2 L616.0 30.1 L620.0 28.9 L624.0 27.6 L628.0 26.1 L632.0 24.7 L636.0 23.1 L640.0 21.6 L644.0 20.1 L648.0 18.7 L652.0 17.3 L656.0 16.1 L660.0 15.0 L664.0 14.0 L668.0 13.2 L672.0 12.6 L676.0 12.2 L680.0 12.0 L684.0 12.0 L688.0 12.3 L692.0 12.7 L696.0 13.3 L700.0 14.1 L704.0 15.1 L708.0 16.2 L712.0 17.5 L716.0 18.8 L720.0 20.3 L724.0 21.8 L728.0 23.3 L732.0 24.8 L736.0 26.3 L740.0 27.7 L744.0 29.0 L748.0 30.2 L752.0 31.3 L756.0 32.2 L760.0 33.0 L764.0 33.5 L768.0 33.9 L772.0 34.0 L776.0 33.9 L780.0 33.7 L784.0 33.2 L788.0 32.5 L792.0 31.6 L796.0 30.6 L800.0 29.5 L804.0 28.2 L808.0 26.8 L812.0 25.3 L816.0 23.8 L820.0 22.3 L824.0 20.8 L828.0 19.3 L832.0 17.9 L836.0 16.6 L840.0 15.5 L844.0 14.4 L848.0 13.6 L852.0 12.9 L856.0 12.4 L860.0 12.1 L864.0 12.0 L868.0 12.1 L872.0 12.5 L876.0 13.0 L880.0 13.7 L884.0 14.6 L888.0 15.7 L892.0 16.9 L896.0 18.2 L900.0 19.6 L904.0 21.1 L908.0 22.6 L912.0 24.1 L916.0 25.6 L920.0 27.0 L924.0 28.4 L928.0 29.7 L932.0 30.8 L936.0 31.8 L940.0 32.6 L944.0 33.3 L948.0 33.7 L952.0 34.0 L956.0 34.0 L960.0 33.8 L964.0 33.4 L968.0 32.8 L972.0 32.1 L976.0 31.1 L980.0 30.0 L984.0 28.8 L988.0 27.4 L992.0 26.0 L996.0 24.5 L1000.0 23.0"/>
   </defs>
 
-  <g mask="url(#dv-mask)" filter="url(#dv-glow)">
-    <g transform="translate(12,23)"><text class="dv-d" id="dv-a0">0</text><text class="dv-d" id="dv-b0" opacity="0">1</text></g>
-    <g transform="translate(28,23)"><text class="dv-d" id="dv-a1">1</text><text class="dv-d" id="dv-b1" opacity="0">0</text></g>
-    <g transform="translate(44,23)"><text class="dv-d" id="dv-a2">0</text><text class="dv-d" id="dv-b2" opacity="0">1</text></g>
-    <g transform="translate(60,23)"><text class="dv-d" id="dv-a3">1</text><text class="dv-d" id="dv-b3" opacity="0">0</text></g>
-    <g transform="translate(76,23)"><text class="dv-d" id="dv-a4">1</text><text class="dv-d" id="dv-b4" opacity="0">0</text></g>
-    <g transform="translate(92,23)"><text class="dv-d" id="dv-a5">1</text><text class="dv-d" id="dv-b5" opacity="0">0</text></g>
-    <g transform="translate(108,23)"><text class="dv-d" id="dv-a6">0</text><text class="dv-d" id="dv-b6" opacity="0">1</text></g>
-    <g transform="translate(124,23)"><text class="dv-d" id="dv-a7">1</text><text class="dv-d" id="dv-b7" opacity="0">0</text></g>
-    <g transform="translate(140,23)"><text class="dv-d" id="dv-a8">1</text><text class="dv-d" id="dv-b8" opacity="0">0</text></g>
-    <g transform="translate(156,23)"><text class="dv-d" id="dv-a9">0</text><text class="dv-d" id="dv-b9" opacity="0">1</text></g>
-    <g transform="translate(172,23)"><text class="dv-d" id="dv-a10">0</text><text class="dv-d" id="dv-b10" opacity="0">1</text></g>
-    <g transform="translate(188,23)"><text class="dv-d" id="dv-a11">1</text><text class="dv-d" id="dv-b11" opacity="0">0</text></g>
-    <g transform="translate(204,23)"><text class="dv-d" id="dv-a12">1</text><text class="dv-d" id="dv-b12" opacity="0">0</text></g>
-    <g transform="translate(220,23)"><text class="dv-d" id="dv-a13">0</text><text class="dv-d" id="dv-b13" opacity="0">1</text></g>
-    <g transform="translate(236,23)"><text class="dv-d" id="dv-a14">1</text><text class="dv-d" id="dv-b14" opacity="0">0</text></g>
-    <g transform="translate(252,23)"><text class="dv-d" id="dv-a15">0</text><text class="dv-d" id="dv-b15" opacity="0">1</text></g>
-    <g transform="translate(268,23)"><text class="dv-d" id="dv-a16">0</text><text class="dv-d" id="dv-b16" opacity="0">1</text></g>
-    <g transform="translate(284,23)"><text class="dv-d" id="dv-a17">1</text><text class="dv-d" id="dv-b17" opacity="0">0</text></g>
-    <g transform="translate(300,23)"><text class="dv-d" id="dv-a18">1</text><text class="dv-d" id="dv-b18" opacity="0">0</text></g>
-    <g transform="translate(316,23)"><text class="dv-d" id="dv-a19">1</text><text class="dv-d" id="dv-b19" opacity="0">0</text></g>
-    <g transform="translate(332,23)"><text class="dv-d" id="dv-a20">0</text><text class="dv-d" id="dv-b20" opacity="0">1</text></g>
-    <g transform="translate(348,23)"><text class="dv-d" id="dv-a21">1</text><text class="dv-d" id="dv-b21" opacity="0">0</text></g>
-    <g transform="translate(364,23)"><text class="dv-d" id="dv-a22">0</text><text class="dv-d" id="dv-b22" opacity="0">1</text></g>
-    <g transform="translate(380,23)"><text class="dv-d" id="dv-a23">0</text><text class="dv-d" id="dv-b23" opacity="0">1</text></g>
-    <g transform="translate(396,23)"><text class="dv-d" id="dv-a24">1</text><text class="dv-d" id="dv-b24" opacity="0">0</text></g>
-    <g transform="translate(412,23)"><text class="dv-d" id="dv-a25">0</text><text class="dv-d" id="dv-b25" opacity="0">1</text></g>
-    <g transform="translate(428,23)"><text class="dv-d" id="dv-a26">1</text><text class="dv-d" id="dv-b26" opacity="0">0</text></g>
-    <g transform="translate(444,23)"><text class="dv-d" id="dv-a27">1</text><text class="dv-d" id="dv-b27" opacity="0">0</text></g>
-    <g transform="translate(460,23)"><text class="dv-d" id="dv-a28">0</text><text class="dv-d" id="dv-b28" opacity="0">1</text></g>
-    <g transform="translate(476,23)"><text class="dv-d" id="dv-a29">1</text><text class="dv-d" id="dv-b29" opacity="0">0</text></g>
-    <g transform="translate(492,23)"><text class="dv-d" id="dv-a30">1</text><text class="dv-d" id="dv-b30" opacity="0">0</text></g>
-    <g transform="translate(508,23)"><text class="dv-d" id="dv-a31">1</text><text class="dv-d" id="dv-b31" opacity="0">0</text></g>
-    <g transform="translate(524,23)"><text class="dv-d" id="dv-a32">0</text><text class="dv-d" id="dv-b32" opacity="0">1</text></g>
-    <g transform="translate(540,23)"><text class="dv-d" id="dv-a33">0</text><text class="dv-d" id="dv-b33" opacity="0">1</text></g>
-    <g transform="translate(556,23)"><text class="dv-d" id="dv-a34">1</text><text class="dv-d" id="dv-b34" opacity="0">0</text></g>
-    <g transform="translate(572,23)"><text class="dv-d" id="dv-a35">0</text><text class="dv-d" id="dv-b35" opacity="0">1</text></g>
-    <g transform="translate(588,23)"><text class="dv-d" id="dv-a36">1</text><text class="dv-d" id="dv-b36" opacity="0">0</text></g>
-    <g transform="translate(604,23)"><text class="dv-d" id="dv-a37">1</text><text class="dv-d" id="dv-b37" opacity="0">0</text></g>
-    <g transform="translate(620,23)"><text class="dv-d" id="dv-a38">0</text><text class="dv-d" id="dv-b38" opacity="0">1</text></g>
-    <g transform="translate(636,23)"><text class="dv-d" id="dv-a39">1</text><text class="dv-d" id="dv-b39" opacity="0">0</text></g>
-    <g transform="translate(652,23)"><text class="dv-d" id="dv-a40">0</text><text class="dv-d" id="dv-b40" opacity="0">1</text></g>
-    <g transform="translate(668,23)"><text class="dv-d" id="dv-a41">0</text><text class="dv-d" id="dv-b41" opacity="0">1</text></g>
-    <g transform="translate(684,23)"><text class="dv-d" id="dv-a42">1</text><text class="dv-d" id="dv-b42" opacity="0">0</text></g>
-    <g transform="translate(700,23)"><text class="dv-d" id="dv-a43">1</text><text class="dv-d" id="dv-b43" opacity="0">0</text></g>
-    <g transform="translate(716,23)"><text class="dv-d" id="dv-a44">1</text><text class="dv-d" id="dv-b44" opacity="0">0</text></g>
-    <g transform="translate(732,23)"><text class="dv-d" id="dv-a45">0</text><text class="dv-d" id="dv-b45" opacity="0">1</text></g>
-    <g transform="translate(748,23)"><text class="dv-d" id="dv-a46">1</text><text class="dv-d" id="dv-b46" opacity="0">0</text></g>
-    <g transform="translate(764,23)"><text class="dv-d" id="dv-a47">0</text><text class="dv-d" id="dv-b47" opacity="0">1</text></g>
-    <g transform="translate(780,23)"><text class="dv-d" id="dv-a48">0</text><text class="dv-d" id="dv-b48" opacity="0">1</text></g>
-    <g transform="translate(796,23)"><text class="dv-d" id="dv-a49">1</text><text class="dv-d" id="dv-b49" opacity="0">0</text></g>
-    <g transform="translate(812,23)"><text class="dv-d" id="dv-a50">1</text><text class="dv-d" id="dv-b50" opacity="0">0</text></g>
-    <g transform="translate(828,23)"><text class="dv-d" id="dv-a51">0</text><text class="dv-d" id="dv-b51" opacity="0">1</text></g>
-    <g transform="translate(844,23)"><text class="dv-d" id="dv-a52">1</text><text class="dv-d" id="dv-b52" opacity="0">0</text></g>
-    <g transform="translate(860,23)"><text class="dv-d" id="dv-a53">1</text><text class="dv-d" id="dv-b53" opacity="0">0</text></g>
-    <g transform="translate(876,23)"><text class="dv-d" id="dv-a54">0</text><text class="dv-d" id="dv-b54" opacity="0">1</text></g>
-    <g transform="translate(892,23)"><text class="dv-d" id="dv-a55">1</text><text class="dv-d" id="dv-b55" opacity="0">0</text></g>
-    <g transform="translate(908,23)"><text class="dv-d" id="dv-a56">0</text><text class="dv-d" id="dv-b56" opacity="0">1</text></g>
-    <g transform="translate(924,23)"><text class="dv-d" id="dv-a57">0</text><text class="dv-d" id="dv-b57" opacity="0">1</text></g>
-    <g transform="translate(940,23)"><text class="dv-d" id="dv-a58">1</text><text class="dv-d" id="dv-b58" opacity="0">0</text></g>
-    <g transform="translate(956,23)"><text class="dv-d" id="dv-a59">1</text><text class="dv-d" id="dv-b59" opacity="0">0</text></g>
-    <g transform="translate(972,23)"><text class="dv-d" id="dv-a60">1</text><text class="dv-d" id="dv-b60" opacity="0">0</text></g>
-    <g transform="translate(988,23)"><text class="dv-d" id="dv-a61">0</text><text class="dv-d" id="dv-b61" opacity="0">1</text></g>
+  <line x1="0" y1="23.0" x2="1000" y2="23.0" stroke="url(#sn-rule)" stroke-width="1"/>
+
+  <use href="#sn-path" fill="none" stroke="url(#sn-skin)" stroke-width="3.0"
+       stroke-linecap="round" stroke-dasharray="430.0 1475.1">
+    <animate attributeName="stroke-dashoffset" values="430.0;-1035.1"
+             dur="9.0s" repeatCount="indefinite"/>
+  </use>
+  <use href="#sn-path" fill="none" stroke="url(#sn-skin)" stroke-width="4.2"
+       stroke-linecap="round" stroke-dasharray="365.5 1475.1">
+    <animate attributeName="stroke-dashoffset" values="365.5;-1099.6"
+             dur="9.0s" repeatCount="indefinite"/>
+  </use>
+  <use href="#sn-path" fill="none" stroke="url(#sn-skin)" stroke-width="5.5"
+       stroke-linecap="round" stroke-dasharray="301.0 1475.1">
+    <animate attributeName="stroke-dashoffset" values="301.0;-1164.1"
+             dur="9.0s" repeatCount="indefinite"/>
+  </use>
+  <use href="#sn-path" fill="none" stroke="url(#sn-skin)" stroke-width="6.8"
+       stroke-linecap="round" stroke-dasharray="236.5 1475.1">
+    <animate attributeName="stroke-dashoffset" values="236.5;-1228.6"
+             dur="9.0s" repeatCount="indefinite"/>
+  </use>
+  <use href="#sn-path" fill="none" stroke="url(#sn-skin)" stroke-width="8.0"
+       stroke-linecap="round" stroke-dasharray="172.0 1475.1">
+    <animate attributeName="stroke-dashoffset" values="172.0;-1293.1"
+             dur="9.0s" repeatCount="indefinite"/>
+  </use>
+  <use href="#sn-path" fill="none" stroke="url(#sn-skin)" stroke-width="9.2"
+       stroke-linecap="round" stroke-dasharray="107.5 1475.1">
+    <animate attributeName="stroke-dashoffset" values="107.5;-1357.6"
+             dur="9.0s" repeatCount="indefinite"/>
+  </use>
+
+  <g>
+    <animateMotion dur="9.0s" repeatCount="indefinite" rotate="auto"
+                   keyPoints="0;1;1" keyTimes="0;0.7065;1" calcMode="linear">
+      <mpath href="#sn-path"/>
+    </animateMotion>
+    <path d="M-7 -5.6 Q6 -5.2 10 0 Q6 5.2 -7 5.6 Z" fill="#FFD43B"/>
+    <path d="M-7 -5.6 Q6 -5.2 10 0 Q2 0 -7 -1.4 Z" fill="#ffffff" opacity="0.18"/>
+    <circle cx="3.4" cy="-2.2" r="1.3" fill="#1b1b1f"/>
+    <circle cx="3.4" cy="2.2" r="1.3" fill="#1b1b1f"/>
+    <path d="M10 0 L15.5 0 M15.5 0 L18.5 -2.4 M15.5 0 L18.5 2.4"
+          stroke="#e0503a" stroke-width="0.9" stroke-linecap="round" fill="none">
+      <animate attributeName="opacity" values="0;0;1;1;0;0"
+               keyTimes="0;0.42;0.46;0.54;0.58;1" dur="2.4s" repeatCount="indefinite"/>
+    </path>
   </g>
 </svg>
