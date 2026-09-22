@@ -33,3 +33,17 @@ Open to ML, data science and agentic AI internships.
 </div>
 
 <img src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" width="100%" alt="">
+
+## FraudLens
+
+Explainable ML for job-scam detection. 2026.
+
+Trained on 17,880 postings. Five algorithms benchmarked with SMOTE, and
+LinearSVC selected on Fake-class F1 rather than accuracy, because a false
+positive costs a real person a real opportunity. SHAP explains each call. A
+LangChain and Groq layer turns that attribution into a readable sentence. Live
+company verification runs against OpenCorporates and Tavily before the verdict
+is shown.
+
+Result: a 34.2% fraud rate in flagged listings against a 4.8% base rate. A 7x
+lift.
