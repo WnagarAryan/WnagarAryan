@@ -1,5 +1,5 @@
 <!-- ============ MASTHEAD / NAMEPLATE / TERMINAL ============ -->
-<div align="center"><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/wordmark.svg" alt="Aryan Nagar"/><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header-terminal.svg" alt="Aryan Nagar"/></div>
+<div align="center"><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/banner-bust.svg" alt=""/><img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/header.svg" alt="Aryan Nagar"/></div>
 
 <!--
   ALTERNATIVE MASTHEADS - pulled from the stack, assets still in the repo.

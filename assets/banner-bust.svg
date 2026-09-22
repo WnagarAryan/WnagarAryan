@@ -1,16 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380" role="img" aria-label="Banner">
   <title>severed bust</title>
   <defs>
-    <radialGradient id="bb-glow" cx="50%" cy="42%" r="46%">
-      <stop offset="0%"   stop-color="#57381f" stop-opacity="0.55"/>
-      <stop offset="45%"  stop-color="#2a1a10" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="#06070a" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="bb-vig" cx="50%" cy="45%" r="62%">
-      <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
-      <stop offset="70%"  stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0.65"/>
-    </radialGradient>
 
     <clipPath id="bb-card"><rect width="1000" height="380" rx="20"/></clipPath>
 
@@ -30,23 +20,18 @@
       @keyframes bb-a { 0%,100%{ transform:translateY(-7px) }  50%{ transform:translateY(7px) } }
       @keyframes bb-b { 0%,100%{ transform:translateY(9px) }  50%{ transform:translateY(-9px) } }
       @keyframes bb-c { 0%,100%{ transform:translateY(-6px) }  50%{ transform:translateY(6px) } }
-      @keyframes bb-breathe { 0%,100%{ opacity:.68 } 50%{ opacity:1 } }
 
       #bb-p1 { animation: bb-a 8s  ease-in-out infinite; }
       #bb-p2 { animation: bb-b 10s ease-in-out infinite; }
       #bb-p3 { animation: bb-c 9s  ease-in-out infinite; }
-      #bb-halo { animation: bb-breathe 7s ease-in-out infinite; }
     </style>
   </defs>
 
   <g clip-path="url(#bb-card)">
-    <rect width="1000" height="380" fill="#07080b"/>
-    <rect id="bb-halo" width="1000" height="380" fill="url(#bb-glow)"/>
+    <rect width="1000" height="380" fill="#000000"/>
 
     <g id="bb-p1"><use href="#bb-i1"/></g>
     <g id="bb-p2"><use href="#bb-i2"/></g>
     <g id="bb-p3"><use href="#bb-i3"/></g>
-
-    <rect width="1000" height="380" fill="url(#bb-vig)"/>
   </g>
 </svg>
