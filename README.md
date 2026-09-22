@@ -104,3 +104,13 @@ planning, memory and context handling.
 B.Tech Computer Science, Global Institute of Technology, Jaipur. 2023 to 2027.
 
 Machine Learning and Deep Learning specializations, Stanford Online. 2026.
+
+## Stack
+
+| | |
+|---|---|
+| Languages | Python, TypeScript |
+| ML | scikit-learn, SHAP, Pandas, NumPy |
+| Agentic | LangChain, Groq API |
+| Backend | FastAPI |
+| Frontend | Next.js |
