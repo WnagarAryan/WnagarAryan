@@ -66,3 +66,6 @@ flowchart LR
     style F fill:#0e7490,color:#f4f7fb,stroke:#00c9d7
     style G fill:#101114,color:#00c9d7,stroke:#00c9d7
 ```
+
+<a href="https://fraudlens-project-showcase.onrender.com"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-demo.svg" alt="Live demo"></a>
+<a href="https://github.com/WnagarAryan/FraudLens-Project-Showcase"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-code.svg" alt="Code"></a>
