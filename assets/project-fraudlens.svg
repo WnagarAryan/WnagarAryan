@@ -1,6 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="520" height="230" viewBox="0 0 520 230" role="img" aria-label="FraudLens">
   <title>FraudLens</title>
   <defs>
+    <linearGradient id="fl-ir" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="520" y2="0">
+      <stop offset="0%" stop-color="#0e7490">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#0e7490;#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490"/>
+      </stop>
+      <stop offset="33%" stop-color="#00c9d7">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#00c9d7;#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7"/>
+      </stop>
+      <stop offset="66%" stop-color="#7fe3ec">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#7fe3ec;#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec"/>
+      </stop>
+      <stop offset="100%" stop-color="#f4f7fb">
+        <animate attributeName="stop-color" dur="14s" repeatCount="indefinite" values="#f4f7fb;#7fe3ec;#00c9d7;#0e7490;#00c9d7;#7fe3ec;#f4f7fb"/>
+      </stop>
+    </linearGradient>
     <linearGradient id="fl-scan" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="#4d9eff" stop-opacity="0"/>
       <stop offset="50%"  stop-color="#4d9eff" stop-opacity="0.16"/>
@@ -28,7 +42,7 @@
   </defs>
 
   <g clip-path="url(#fl-clip)">
-    <rect width="520" height="230" fill="#0e1215"/>
+    <rect width="520" height="230" fill="#08090b"/>
     <rect id="fl-sweep1" x="-160" y="0" width="160" height="230" fill="url(#fl-scan)"/>
 
     <g class="fl-mono">
@@ -42,12 +56,12 @@
     </g>
 
     <text class="fl-sans" x="260" y="132" text-anchor="middle" font-size="40" font-weight="600"
-          letter-spacing="3" fill="#d9e1e6">FRAUDLENS</text>
-    <rect id="fl-cur" x="400" y="103" width="4" height="32" fill="#4d9eff"/>
+          letter-spacing="3" fill="url(#fl-ir)">FRAUDLENS</text>
+    <rect id="fl-cur" x="400" y="103" width="4" height="32" fill="url(#fl-ir)"/>
 
     <text class="fl-sans" x="260" y="158" text-anchor="middle" font-size="11.5" fill="#9aa3ad">
       An explainable ML system for job scam detection
     </text>
   </g>
-  <rect x="1" y="1" width="518" height="228" rx="15" fill="none" stroke="#e8e8e8" stroke-opacity="0.85" stroke-width="2"/>
+  <rect x="1" y="1" width="518" height="228" rx="15" fill="none" stroke="url(#fl-ir)" stroke-opacity="0.9" stroke-width="2"/>
 </svg>
