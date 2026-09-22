@@ -3,3 +3,10 @@
 <img src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/wordmark.svg" alt="Aryan Nagar - ML and Agentic AI Engineer" width="100%">
 
 </div>
+
+<div align="center">
+
+I build explainable ML and agentic AI systems. Models that can justify the call
+they just made, and agents that carry a task from prompt to finished work.
+
+</div>
