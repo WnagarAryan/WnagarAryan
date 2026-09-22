@@ -89,3 +89,12 @@ frontend, deployed on Render.
 <a href="https://github.com/WnagarAryan/Kuberis-AI-Business-Intelligence-Agent"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-code.svg" alt="Code"></a>
 
 <img src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" width="100%" alt="">
+
+## Experience
+
+**Agentic AI Intern**, Grras Solutions Pvt. Ltd., Jaipur. May to July 2026.
+
+Built and deployed ten autonomous AI agents in Python with LangChain and LLM
+APIs: research, task automation, an email assistant, multi-agent collaboration
+and a capstone system. 15 or more prompt templates, with multi-step reasoning,
+planning, memory and context handling.
