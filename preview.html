@@ -2,64 +2,52 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Header preview</title>
+<title>Asset preview</title>
 <style>
-  body { margin:0; padding:40px; background:#0d1117; color:#c9d1d9;
-         font:14px/1.6 'Segoe UI',system-ui,sans-serif; }
-  h2 { font-size:15px; letter-spacing:2px; text-transform:uppercase;
-       color:#7d8899; font-weight:600; margin:40px 0 12px; }
+  body { margin:0; padding:40px; background:#08090b; color:#dde5f0;
+         font:14px/1.6 ui-monospace,'SFMono-Regular',Consolas,monospace; }
+  h2 { font-size:12px; letter-spacing:3px; text-transform:uppercase;
+       color:#00c9d7; font-weight:600; margin:40px 0 10px; }
   h2:first-child { margin-top:0; }
   .wrap { max-width:1000px; margin:0 auto; }
-  img { width:100%; display:block; border-radius:12px; }
-  .note { color:#586274; font-size:13px; margin-top:8px; }
+  img { display:block; max-width:100%; }
+  .row img { display:inline-block; vertical-align:middle; margin-right:8px; }
+  p { color:#6b7280; font-size:12px; margin:6px 0 0; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <h2>Masthead &mdash; severed bust</h2>
-  <img src="./assets/banner-bust.svg" alt="bust banner">
-  <p class="note">The sculpture is keyed out of its background, then split into its three physical
-  pieces by connected-component labelling &mdash; not by horizontal bands, which cannot separate a
-  skull that overhangs the jaw. Each piece is its own PNG on its own clock (8 / 10 / 9 s), so the
-  head never reassembles and only the cutouts move.</p>
-
-  <h2>Nameplate &mdash; header-neon.svg</h2>
-  <img src="./assets/header-neon.svg" alt="nameplate">
-  <p class="note">Same text animation as before &mdash; gradient sweeping the letters, pulsing rule,
-  blinking caret &mdash; over the marble statue, which drifts a few pixels across 18 s. A horizontal
-  fade keeps the left side dark enough to read the name against.</p>
-
-  <h2>Terminal &mdash; header-terminal.svg</h2>
-  <img src="./assets/header-terminal.svg" alt="terminal header">
-  <p class="note">Same 9 s typing sequence, now over the marble angel. The typed lines run out at
-  x 540 and the bright marble starts there, so the two never overlap and the scrim can stay light
-  enough to keep the statue readable.</p>
-
-  <h2>About Me sidebar &mdash; PERSPECTIVE</h2>
-  <img src="./assets/perspective.svg" alt="perspective" style="width:370px">
-  <p class="note">Not the photo &mdash; the word rebuilt as live type, so the letters can move.
-  Each glyph spins in from its own direction, settles at its quarter turn, holds, then scatters
-  again on a 12 s loop, cascading 0.13 s apart. Josefin Sans Light, subsetted to the eight glyphs
-  the word needs, embedded at 1.6 KB. 11 KB total. Canvas is 440x1040 so it fills the sidebar cell rather than floating in it.</p>
-
-  <h2>Project banners &mdash; each in its own app's theme</h2>
-  <img src="./assets/project-fraudlens.svg" alt="FraudLens" style="width:520px">
-  <p class="note">FraudLens: the app's own near-black ground, white keyline, monospace corner
-  telemetry, blue caret. A scan sweep crosses every 6 s and the corner labels lift in sequence.</p>
-  <img src="./assets/project-kuberis.svg" alt="Kuberis" style="width:520px;margin-top:14px">
-  <p class="note">Kuberis: ruled ledger paper, navy Playfair wordmark, gold monospace marginalia.
-  A ledger should sit still, so the only motion is the rule drawing itself under the wordmark.</p>
+  <h2>Wordmark</h2>
+  <img src="./assets/wordmark.svg" alt="wordmark">
+  <p>1000x280. Seven contour lines animate their own path, damped toward the
+  horizon. The sky holds still: 10.6% of terrain pixels change between frames
+  3.5s apart, and zero sky pixels do.</p>
 
   <h2>Divider</h2>
   <img src="./assets/divider.svg" alt="divider">
-  <p class="note">An axon with dendrite stubs. One action potential sweeps left to right every 3.6 s,
-  each relay node brightening as it passes.</p>
+  <p>62 columns of binary, each flipping on its own clock, all drawing from one
+  gradient that cycles inside the site cyan.</p>
 
-  <h2>Footer</h2>
-  <img src="./assets/footer-wave.svg" alt="footer">
-  <p class="note">The herd is already running, so the picture only gets a slow 30 s push. A vertical
-  scrim darkens the sky behind the type and leaves the horses clear.</p>
+  <h2>Buttons</h2>
+  <div class="row">
+    <img src="./assets/btn-linkedin.svg" alt="">
+    <img src="./assets/btn-gmail.svg" alt="">
+    <img src="./assets/btn-instagram.svg" alt="">
+    <img src="./assets/btn-demo.svg" alt="">
+    <img src="./assets/btn-code.svg" alt="">
+  </div>
+  <p>One file each, because a markdown image carries a single href and grouping
+  them would cost every button its own link.</p>
+
+  <h2>Project cards</h2>
+  <img src="./assets/project-fraudlens.svg" alt="" style="width:520px">
+  <img src="./assets/project-kuberis.svg" alt="" style="width:520px;margin-top:14px">
+
+  <h2>Kept, not currently used</h2>
+  <img src="./assets/header-neon.svg" alt="">
+  <img src="./assets/header-terminal.svg" alt="" style="margin-top:14px">
+  <img src="./assets/footer-quote.svg" alt="" style="margin-top:14px">
 
 </div>
 </body>
