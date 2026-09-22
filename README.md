@@ -114,3 +114,10 @@ Machine Learning and Deep Learning specializations, Stanford Online. 2026.
 | Agentic | LangChain, Groq API |
 | Backend | FastAPI |
 | Frontend | Next.js |
+
+## Elsewhere
+
+[Portfolio](https://portfolio-pied-two-57.vercel.app) &middot;
+[LinkedIn](https://www.linkedin.com/in/aryan-nagar-aa870a290) &middot;
+[Medium](https://medium.com/@iam.prince0004) &middot;
+[Email](mailto:nagar.aaryan04@gmail.com)
