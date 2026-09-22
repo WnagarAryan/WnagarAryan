@@ -21,3 +21,13 @@ they just made, and agents that carry a task from prompt to finished work.
 <img src="https://img.shields.io/badge/SHAP-08090b?style=flat-square&logoColor=00c9d7" alt="SHAP">
 
 </div>
+
+<div align="center">
+
+<a href="https://portfolio-pied-two-57.vercel.app"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-demo.svg" alt="Portfolio"></a>
+<a href="https://www.linkedin.com/in/aryan-nagar-aa870a290"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-linkedin.svg" alt="LinkedIn"></a>
+<a href="mailto:nagar.aaryan04@gmail.com"><img height="38" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-gmail.svg" alt="Email"></a>
+
+Open to ML, data science and agentic AI internships.
+
+</div>
