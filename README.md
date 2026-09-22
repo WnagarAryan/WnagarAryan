@@ -31,3 +31,5 @@ they just made, and agents that carry a task from prompt to finished work.
 Open to ML, data science and agentic AI internships.
 
 </div>
+
+<img src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" width="100%" alt="">
