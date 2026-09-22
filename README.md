@@ -146,8 +146,6 @@ const aryan = {
   <a href="https://www.linkedin.com/in/aryan-nagar-aa870a290/"><img height="42" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-linkedin.svg" alt="LinkedIn"/></a>
   &nbsp;
   <a href="mailto:nagar.aaryan04@gmail.com"><img height="42" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-gmail.svg" alt="Email"/></a>
-  &nbsp;
-  <a href="https://www.instagram.com/t0o.dangerous.aary/"><img height="42" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/btn-instagram.svg" alt="Instagram"/></a>
 </p>
 
 <img width="100%" src="https://raw.githubusercontent.com/WnagarAryan/WnagarAryan/main/assets/divider.svg" alt=""/>
